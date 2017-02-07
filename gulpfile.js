@@ -10,7 +10,7 @@ var gulp        = require('gulp'),
 	Main tasks
    ============================================================ */
 
-gulp.task('default', ['watch', 'browser-sync']);
+gulp.task('default', ['watch-less', 'watch-html', 'browser-sync']);
 
 /* ============================================================
 	Configuration
@@ -22,8 +22,12 @@ var config = {
 	debug: true
 };
 
-gulp.task('watch', ['less'], function () {
+gulp.task('watch-less', ['less'], function () {
 	return gulp.watch(config.assetsPath + '/styles/**/*.less', ['less']);
+});
+
+gulp.task('watch-html', ['less'], function () {
+	return gulp.watch(['*.html', 'components/*.html']).on('change', browserSync.reload);
 });
 
 var handleError = function(err) {

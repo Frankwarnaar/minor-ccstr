@@ -7,6 +7,14 @@
 /* ==================================================
 	Font sizes
    ================================================== */
+.hidden {
+  display: none;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 html {
   width: 100%;
   min-height: 100%;
@@ -14,26 +22,14 @@ html {
 body {
   width: 100%;
   min-height: 100%;
-  background: #EDEDED;
+  background: #fff;
   color: #41484e;
-}
-* {
-  box-sizing: border-box;
 }
 /* ==================================================
 	Font familes
    ================================================== */
 .font-primary,
 body {
-  font-family: 'helvetica', sans-serif;
-}
-.font-secondary,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-family: 'helvetica', sans-serif;
 }
 /* ==================================================
@@ -48,13 +44,7 @@ h6 {
 .font-weight-medium {
   font-weight: 500;
 }
-.font-weight-regular,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.font-weight-regular {
   font-weight: 400;
 }
 .font-weight-light {
@@ -79,7 +69,10 @@ h6 {
   font-size: calc(0.95em / (1.2 * 1.2));
 }
 .font-size-sm,
-h6 {
+h6,
+input,
+textarea,
+.chat footer {
   font-size: calc(0.95em / (1.2));
 }
 .font-size-base,
@@ -87,7 +80,8 @@ body {
   font-size: 0.95em;
 }
 .font-size-md,
-h5 {
+h5,
+button {
   font-size: calc(0.95em * (1.2));
 }
 .font-size-lg,
@@ -117,7 +111,10 @@ h1 {
     font-size: calc(1em / (1.2 * 1.2));
   }
   .font-size-sm,
-  h6 {
+  h6,
+  input,
+  textarea,
+  .chat footer {
     font-size: calc(1em / (1.2));
   }
   .font-size-base,
@@ -125,7 +122,8 @@ h1 {
     font-size: 1em;
   }
   .font-size-md,
-  h5 {
+  h5,
+  button {
     font-size: calc(1em * (1.2));
   }
   .font-size-lg,
@@ -156,7 +154,10 @@ h1 {
     font-size: calc(1em / (1.2 * 1.2));
   }
   .font-size-sm,
-  h6 {
+  h6,
+  input,
+  textarea,
+  .chat footer {
     font-size: calc(1em / (1.2));
   }
   .font-size-base,
@@ -164,7 +165,8 @@ h1 {
     font-size: 1em;
   }
   .font-size-md,
-  h5 {
+  h5,
+  button {
     font-size: calc(1em * (1.2));
   }
   .font-size-lg,
@@ -191,14 +193,22 @@ h4,
 h5,
 h6 {
   margin: .8em 0;
-  letter-spacing: 3px;
 }
 p {
   line-height: 150%;
 }
-.bg-lightest-transparent {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.4);
+/* ==================================================
+	Status text colors
+   ================================================== */
+[data-status] {
+  padding: .125rem .5rem;
+  color: #fff;
+}
+[data-status="READ"] {
+  background: #00f787;
+}
+[data-status="DELIVERED"] {
+  background: #60c5f8;
 }
 .spacing-xs {
   margin: 0.325rem 0;
@@ -220,4 +230,74 @@ p {
 }
 .spacing-xxxl {
   margin: 8rem 0;
+}
+input,
+textarea {
+  padding: .5rem;
+  border: 1px solid #95a5a5;
+  font-family: inherit;
+  font-size: inherit;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid #95a5a5;
+  outline: none;
+}
+button {
+  padding: 0 .5rem;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  background: #F7A100;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+button:hover {
+  background: #de9000;
+}
+.list--clean {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.chats-list {
+  background: #ecf0f1;
+  padding: 1rem 0;
+}
+.chat {
+  padding: .5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.chat footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  order: -1;
+  font-weight: 300;
+  border-bottom: 1px solid #F7A100;
+  vertical-align: middle;
+}
+.chat__message {
+  padding-top: .325rem;
+  font-weight: 400;
+}
+form {
+  padding: .5rem 1rem;
+}
+.form--inline {
+  display: flex;
+  flex-direction: row;
+}
+.form--inline input,
+.form--inline textarea {
+  width: 80%;
+}
+.form--inline button {
+  width: 20%;
 }

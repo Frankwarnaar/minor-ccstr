@@ -6,10 +6,6 @@
 	font-family: @font-primary;
 }
 
-.font-secondary {
-	font-family: @font-secondary;
-}
-
 /* ==================================================
 	Font weights
    ================================================== */
@@ -70,10 +66,7 @@ h3,
 h4,
 h5,
 h6 {
-	&:extend(.font-secondary);
-	&:extend(.font-weight-regular);
 	margin: .8em 0;
-	letter-spacing: 3px;
 }
 
 h1 {
@@ -102,4 +95,21 @@ h6 {
 
 p {
 	line-height: 150%;
+}
+
+/* ==================================================
+	Status text colors
+   ================================================== */
+
+[data-status] {
+	padding: .125rem .5rem;
+	color: @color-lightest;
+}
+
+[data-status="READ"] {
+	background: @color-highlight-success;
+}
+
+[data-status="DELIVERED"] {
+	background: @color-highlight-info;
 }
