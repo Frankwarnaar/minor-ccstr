@@ -22,9 +22,8 @@ textarea {
 }
 
 .input-label-group {
-	display: flex;
-	flex-direction: row;
-
+	&:extend(.flex);
+	&:extend(.flex--row);
 	padding: 1rem 0 .5rem;
 
 	input {

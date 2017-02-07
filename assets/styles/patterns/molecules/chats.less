@@ -1,22 +1,16 @@
-.chats-list {
-	background: @color-gray-clouds;
-	padding: 1rem 0;
-}
-
 .chat {
+	&:extend(.flex);
+	&:extend(.flex--column);
 	padding: .5rem;
-	margin: 1rem;
-
-	display: flex;
-	flex-direction: column;
+	margin: 1rem 0;
 
 	background: @color-lightest;
 
 	footer {
 		&:extend(.font-size-sm);
+		&:extend(.flex);
+		&:extend(.flex--row);
 
-		display: flex;
-		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		order: -1;
