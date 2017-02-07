@@ -1,0 +1,223 @@
+/* ==================================================
+	Font familes
+   ================================================== */
+/* ==================================================
+	Font weights
+   ================================================== */
+/* ==================================================
+	Font sizes
+   ================================================== */
+html {
+  width: 100%;
+  min-height: 100%;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  background: #EDEDED;
+  color: #41484e;
+}
+* {
+  box-sizing: border-box;
+}
+/* ==================================================
+	Font familes
+   ================================================== */
+.font-primary,
+body {
+  font-family: 'helvetica', sans-serif;
+}
+.font-secondary,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'helvetica', sans-serif;
+}
+/* ==================================================
+	Font weights
+   ================================================== */
+.font-weight-bold {
+  font-weight: 700;
+}
+.font-weight-semibold {
+  font-weight: 600;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-regular,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+.font-weight-light {
+  font-weight: 300;
+}
+.font-weight-thin {
+  font-weight: 200;
+}
+.font-weight-ultralight {
+  font-weight: 100;
+}
+/* ==================================================
+	Font sizes
+   ================================================== */
+.font-size-xxxs {
+  font-size: calc(0.95em / (1.2 * 1.2 * 1.2 * 1.2));
+}
+.font-size-xxs {
+  font-size: calc(0.95em / (1.2 * 1.2 * 1.2));
+}
+.font-size-xs {
+  font-size: calc(0.95em / (1.2 * 1.2));
+}
+.font-size-sm,
+h6 {
+  font-size: calc(0.95em / (1.2));
+}
+.font-size-base,
+body {
+  font-size: 0.95em;
+}
+.font-size-md,
+h5 {
+  font-size: calc(0.95em * (1.2));
+}
+.font-size-lg,
+h4 {
+  font-size: calc(0.95em * (1.2 * 1.2));
+}
+.font-size-xl,
+h3 {
+  font-size: calc(0.95em * (1.2 * 1.2 * 1.2));
+}
+.font-size-xxl,
+h2 {
+  font-size: calc(0.95em * (1.2 * 1.2 * 1.2 * 1.2));
+}
+.font-size-xxxl,
+h1 {
+  font-size: calc(0.95em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
+}
+@media screen and (min-width: 769px ) {
+  .font-size-xxxs {
+    font-size: calc(1em / (1.2 * 1.2 * 1.2 * 1.2));
+  }
+  .font-size-xxs {
+    font-size: calc(1em / (1.2 * 1.2 * 1.2));
+  }
+  .font-size-xs {
+    font-size: calc(1em / (1.2 * 1.2));
+  }
+  .font-size-sm,
+  h6 {
+    font-size: calc(1em / (1.2));
+  }
+  .font-size-base,
+  body {
+    font-size: 1em;
+  }
+  .font-size-md,
+  h5 {
+    font-size: calc(1em * (1.2));
+  }
+  .font-size-lg,
+  h4 {
+    font-size: calc(1em * (1.2 * 1.2));
+  }
+  .font-size-xl,
+  h3 {
+    font-size: calc(1em * (1.2 * 1.2 * 1.2));
+  }
+  .font-size-xxl,
+  h2 {
+    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
+  }
+  .font-size-xxxl,
+  h1 {
+    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
+  }
+}
+@media screen and (min-width: 993px ) {
+  .font-size-xxxs {
+    font-size: calc(1em / (1.2 * 1.2 * 1.2 * 1.2));
+  }
+  .font-size-xxs {
+    font-size: calc(1em / (1.2 * 1.2 * 1.2));
+  }
+  .font-size-xs {
+    font-size: calc(1em / (1.2 * 1.2));
+  }
+  .font-size-sm,
+  h6 {
+    font-size: calc(1em / (1.2));
+  }
+  .font-size-base,
+  body {
+    font-size: 1em;
+  }
+  .font-size-md,
+  h5 {
+    font-size: calc(1em * (1.2));
+  }
+  .font-size-lg,
+  h4 {
+    font-size: calc(1em * (1.2 * 1.2));
+  }
+  .font-size-xl,
+  h3 {
+    font-size: calc(1em * (1.2 * 1.2 * 1.2));
+  }
+  .font-size-xxl,
+  h2 {
+    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
+  }
+  .font-size-xxxl,
+  h1 {
+    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: .8em 0;
+  letter-spacing: 3px;
+}
+p {
+  line-height: 150%;
+}
+.bg-lightest-transparent {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.4);
+}
+.spacing-xs {
+  margin: 0.325rem 0;
+}
+.spacing-sm {
+  margin: 0.5rem 0;
+}
+.spacing-md {
+  margin: 0.825rem 0;
+}
+.spacing-lg {
+  margin: 1rem 0;
+}
+.spacing-xl {
+  margin: 2rem 0;
+}
+.spacing-xxl {
+  margin: 4rem 0;
+}
+.spacing-xxxl {
+  margin: 8rem 0;
+}
