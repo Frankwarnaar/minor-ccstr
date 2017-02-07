@@ -234,14 +234,32 @@ p {
 input,
 textarea {
   padding: .5rem;
-  border: 1px solid #95a5a5;
+  border: none;
+  border-bottom: 1px solid #F7A100;
+  border-radius: 0;
   font-family: inherit;
   font-size: inherit;
+  background: #fff;
+  box-shadow: none;
+  outline: none;
 }
 input:focus,
 textarea:focus {
-  border: 1px solid #95a5a5;
+  border: none;
+  border-bottom: 1px solid #F7A100;
   outline: none;
+}
+.input-label-group {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 .5rem;
+}
+.input-label-group input {
+  padding: 0;
+  margin-right: .325rem;
+}
+.input-label-group label {
+  padding: 0;
 }
 button {
   padding: 0 .5rem;
@@ -256,6 +274,18 @@ button {
 }
 button:hover {
   background: #de9000;
+}
+label {
+  font-weight: 400;
+  padding: .5rem 0;
+}
+a {
+  color: #F7A100;
+  transition: 0.1s ease-in-out;
+}
+a:hover,
+a:focus {
+  color: #ffb52b;
 }
 .list--clean {
   padding: 0;
@@ -289,15 +319,17 @@ button:hover {
 }
 form {
   padding: .5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+form a {
+  padding: .5rem 0;
 }
 .form--inline {
-  display: flex;
   flex-direction: row;
 }
 .form--inline input,
 .form--inline textarea {
-  width: 80%;
-}
-.form--inline button {
-  width: 20%;
+  width: 100%;
+  height: 40px;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "ccstr",
+  "name": "ccsttr",
   "version": "1.0.0",
   "description": "class about css",
   "main": "gulpfile.js",
@@ -15,7 +15,6 @@
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",
-    "gulp-if": "^2.0.1",
     "gulp-less": "^3.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-util": "^3.0.7",

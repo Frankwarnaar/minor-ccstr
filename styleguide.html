@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 
-    <title>Living Styleguide</title>
+	<title>Living Styleguide</title>
 
 	<link href="../dist/css/app.css" rel="stylesheet" type="text/css"/>
 
@@ -15,52 +15,78 @@
 <h1>Living Styleguide</h1>
 
 <!-- place components or patterns here -->
-<ol class="chats-list list--clean">
-	<li class="chats__single chat">
+<section>
+	<ol class="chats-list list--clean">
+		<li class="chats__single chat">
 
-		<p class="chat__message">
-			Hey!
-		</p>
+			<p class="chat__message">
+				Hey!
+			</p>
 
-		<footer>
-			<p class="chat__status">Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
-			<p class="chat__status" data-status="READ">Has been read</p>
-		</footer>
+			<footer>
+				<p class="chat__status">Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+				<p class="chat__status" data-status="READ">Has been read</p>
+			</footer>
 
-	</li>
-	<li class="chats__single chat">
+		</li>
+		<li class="chats__single chat">
 
-		<p class="chat__message">
-			Hey! Sorry I was busy
-		</p>
+			<p class="chat__message">
+				Hey! Sorry I was busy
+			</p>
 
-		<footer>
-			<p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
-		</footer>
+			<footer>
+				<p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+			</footer>
 
-	</li>
-	<li class="chats__single chat">
+		</li>
+		<li class="chats__single chat">
 
-		<p class="chat__message">
-			I sent that 2 years ago
-		</p>
+			<p class="chat__message">
+				I sent that 2 years ago
+			</p>
 
-		<footer>
-			<p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
-			<p data-status="DELIVERED">Has been delivered</p>
-		</footer>
+			<footer>
+				<p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+				<p data-status="DELIVERED">Has been delivered</p>
+			</footer>
 
-	</li>
-</ol>
+		</li>
+	</ol>
+</section>
 
-<form class="form--inline" action="/" method="post">
+<section>
+	<form class="form--inline" action="/" method="post">
 
-	<label class="hidden" for="field-message">Message</label>
-	<textarea name="field-message" id="field-message"></textarea>
+		<label class="hidden" for="field-message">Message</label>
+		<textarea name="field-message" id="field-message"></textarea>
 
-	<button type="submit">Send</button>
+		<button type="submit">Send</button>
 
-</form>
+	</form>
+</section>
+
+<section>
+	<form action="/" method="post">
+
+		<label for="field-email">Email</label>
+		<input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
+
+		<label for="field-password">Password</label>
+		<input type="password" id="field-password" name="field-password" required>
+
+		<div class="input-label-group">
+			<input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
+			<label for="field-stay-logged-in">Stay logged in</label>
+		</div>
+
+		<a href="/">Forgot password</a>
+
+		<button type="submit">Login</button>
+
+	</form>
+<section>
 
 </body>
+
 </html>
