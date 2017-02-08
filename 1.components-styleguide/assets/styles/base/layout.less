@@ -12,10 +12,17 @@ html {
 body {
 	&:extend(.font-primary);
 	&:extend(.font-size-base);
+	padding-top: 6rem;
+
 	width: 100%;
 	min-height: 100%;
+
 	background: @color-lightest;
 	color: @color-gray-midnight;
+
+	@media @q-sm-min {
+		padding-top: 4rem;
+	}
 }
 
 .flex {
