@@ -10,7 +10,7 @@ html {
 }
 
 body {
-	&:extend(.font-primary);
+	.font-primary;
 	&:extend(.font-size-base);
 	padding-top: 6rem;
 
@@ -29,8 +29,22 @@ body {
 	display: flex;
 }
 
+.flex--md-up {
+	@media @q-md-min {
+		display: flex;
+	}
+}
+
 .flex--row {
 	flex-direction: row;
+}
+
+.flex--row-md-up {
+	flex-direction: column;
+
+	@media @q-md-min {
+		flex-direction: row;
+	}
 }
 
 .flex--column {

@@ -41,6 +41,7 @@ nav {
 
 	.list-item--has-children {
 		position: relative;
+		width: 6.5em;
 
 		> a:after {
 			&:extend(.font-size-xxs);
@@ -48,12 +49,8 @@ nav {
 		}
 
 		ul {
-			position: absolute;
-			top: 3rem;
-			left: 0;
-			right: 0;
-
-			display: none;
+			.flex;
+			.flex--row;
 
 			background: @color-primary;
 			text-align: left;
@@ -61,13 +58,27 @@ nav {
 			a {
 				line-height: 2rem;
 			}
-		}
 
+			@media @q-sm-min {
+				.flex--column;
+				display: none;
+
+				position: absolute;
+				top: 3rem;
+				left: 0;
+				right: 0;
+			}
+
+		}
+		
 		&:hover {
-			ul {
-				display: block;
+			@media @q-sm-min {
+				ul {
+					display: block;
+				}
 			}
 		}
+
 	}
 
 	@media @q-sm-min {
