@@ -4,12 +4,15 @@
 	padding: .5rem;
 	margin: 1rem 0;
 
-	background: @color-lightest;
+	background: @color-gray-clouds;
 
 	footer {
-		.font-size-sm;
+		&:extend(.font-size-sm);
 		.flex;
 		.flex--row;
+
+		position: relative;
+		padding: .325rem 0;
 
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -19,12 +22,11 @@
 		border-bottom: 1px solid @color-primary;
 		vertical-align: middle;
 
-		p:first-child {
-			float: left;
-		}
-
-		p:last-child {
-			float: right;
+		p:nth-child(2) {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 }
