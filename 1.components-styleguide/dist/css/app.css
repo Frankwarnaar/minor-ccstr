@@ -379,7 +379,11 @@ a:focus {
   border-bottom: 1px solid #F7A100;
   vertical-align: middle;
 }
+.chat footer p:first-child {
+  max-width: 55%;
+}
 .chat footer p:nth-child(2) {
+  max-width: 45%;
   position: absolute;
   right: 0;
   top: 50%;
