@@ -26,6 +26,9 @@ body {
   background: #fff;
   color: #41484e;
 }
+body > h1 {
+  padding-left: 1rem;
+}
 :target {
   animation: flashBackground 0.7s ease-in-out forwards;
 }
@@ -315,7 +318,7 @@ textarea {
 input:focus,
 textarea:focus {
   border: none;
-  border-bottom: 1px solid #F7A100;
+  border-bottom: 1px solid #ffc75e;
   outline: none;
 }
 .input-label-group {
