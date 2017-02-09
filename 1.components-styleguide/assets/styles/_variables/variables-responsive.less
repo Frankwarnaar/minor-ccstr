@@ -1,14 +1,14 @@
 @break-xs: 0;
-@break-sm: 576px;
-@break-md: 768px;
-@break-lg: 992px;
-@break-xl: 1200px;
+@break-sm: 36rem;
+@break-md: 48rem;
+@break-lg: 62rem;
+@break-xl: 75rem;
 
-@break-xs-min: (@break-xs + 1);
-@break-sm-min: (@break-sm + 1);
-@break-md-min: (@break-md + 1);
-@break-lg-min: (@break-lg + 1);
-@break-xl-min: (@break-xl + 1);
+@break-xs-min: (@break-xs + .01);
+@break-sm-min: (@break-sm + .01);
+@break-md-min: (@break-md + .01);
+@break-lg-min: (@break-lg + .01);
+@break-xl-min: (@break-xl + .01);
 
 @q-xs-min: ~"screen and (min-width: "@break-md-min~")";
 @q-xs-max: ~"screen and (max-width:" @break-sm~")";

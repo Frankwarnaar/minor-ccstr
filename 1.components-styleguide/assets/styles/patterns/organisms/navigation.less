@@ -20,8 +20,12 @@ nav {
 	> ul {
 		&:extend(.flex);
 		&:extend(.flex--row);
+		float: right;
 	}
 
+	li {
+		display: inline-block;
+	}
 
 	a {
 		color: @color-lightest;
@@ -78,7 +82,7 @@ nav {
 
 	}
 
-	@media @q-sm-min {
+	@media @q-md-min {
 		max-height: @nav-height;
 	}
 }
