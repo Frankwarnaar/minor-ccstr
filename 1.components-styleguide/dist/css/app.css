@@ -355,6 +355,10 @@ a:hover,
 a:focus {
   color: #ffb52b;
 }
+time,
+datetime {
+  color: #7e8c8d;
+}
 .list--clean {
   padding: 0;
   margin: 0;
@@ -424,11 +428,17 @@ article {
     margin-right: 1rem;
   }
 }
+article footer {
+  padding-top: .325rem;
+  margin-top: .325rem;
+  border-top: 1px solid #F7A100;
+}
 section {
   padding: 2rem 1rem;
 }
 nav {
   padding: 0 1rem;
+  margin-bottom: 1rem;
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -442,6 +452,7 @@ nav h2 {
   line-height: 52px;
 }
 nav > ul {
+  flex-wrap: wrap;
   float: right;
 }
 nav li {
