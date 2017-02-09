@@ -12,16 +12,33 @@ html {
 body {
 	.font-primary;
 	&:extend(.font-size-base);
-	padding-top: 6rem;
 
 	width: 100%;
 	min-height: 100%;
 
 	background: @color-lightest;
 	color: @color-gray-midnight;
+}
 
-	@media @q-sm-min {
-		padding-top: 4rem;
+:target {
+	animation: flashBackground @transition-slow forwards;
+}
+
+@keyframes flashBackground {
+	0% {
+		background: lighten(@color-highlight-info, 25%);
+	}
+
+	33% {
+		background: @color-lightest;
+	}
+
+	67% {
+		background: lighten(@color-highlight-info, 25%);
+	}
+
+	100% {
+		background: @color-lightest;
 	}
 }
 

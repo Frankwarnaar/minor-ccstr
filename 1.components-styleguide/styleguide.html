@@ -36,7 +36,17 @@
 	</ul>
 </nav>
 
-<article>
+<nav>
+	<h2>Jump to components</h2>
+	<ul class="list--clean">
+		<li><a href="#media-item">Media item</a></li>
+		<li><a href="#chat">Chat</a></li>
+		<li><a href="#login">Login</a></li>
+		<li><a href="#picture">Picture with subtitle</a></li>
+	</ul>
+</nav>
+
+<article id="media-item">
 	<h1><a href="/">HTML5 accessibility, are block links hurting accessibility?</a></h1>
 	<div class="flex--md-up flex--row-md-up">
 		<img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
@@ -44,7 +54,7 @@
 	</div>
 </article>
 
-<section>
+<section id="chat">
 	<ol class="chats-list list--clean">
 		<li class="chats__single chat">
 
@@ -93,7 +103,7 @@
 	</form>
 </section>
 
-<section>
+<section id="login">
 	<form action="/" method="post">
 
 		<label for="field-email">Email</label>
@@ -113,6 +123,25 @@
 
 	</form>
 </section>
+
+<article id="picture">
+	<h1>This picture has a title</h1>
+	<figure>
+		<!-- Portrait -->
+		<img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
+
+		<!-- Landscape -->
+		<!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+	</figure>
+	<figcaption>
+		<p>
+			There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+		</p>
+		<footer>
+			<time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+		</footer>
+	</figcaption>
+</article>
 
 </body>
 

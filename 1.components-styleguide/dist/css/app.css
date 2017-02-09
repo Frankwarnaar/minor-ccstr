@@ -21,15 +21,26 @@ html {
 }
 body {
   font-family: 'helvetica', sans-serif;
-  padding-top: 6rem;
   width: 100%;
   min-height: 100%;
   background: #fff;
   color: #41484e;
 }
-@media screen and (min-width: 577px ) {
-  body {
-    padding-top: 4rem;
+:target {
+  animation: flashBackground 0.5s ease-in-out forwards;
+}
+@keyframes flashBackground {
+  0% {
+    background: #daf2fd;
+  }
+  33% {
+    background: #fff;
+  }
+  67% {
+    background: #daf2fd;
+  }
+  100% {
+    background: #fff;
   }
 }
 .flex,
@@ -391,11 +402,9 @@ nav {
   flex-wrap: wrap;
   background: #F7A100;
   color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
 }
-nav h1 {
+nav h1,
+nav h2 {
   margin: 0;
   display: inline-block;
   line-height: 52px;
