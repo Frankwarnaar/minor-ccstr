@@ -12,20 +12,12 @@ html {
 body {
 	&:extend(.font-size-base);
 	.font-primary;
-	.flex;
-	.flex--column;
 
 	width: 100%;
 	min-height: 100%;
 
 	background: @color-lightest;
 	color: @color-gray-midnight;
-	justify-content: center;
-
-	@media @q-lg-min {
-		.flex--row;
-		flex-wrap: wrap;
-	}
 }
 
 :target {
@@ -69,30 +61,4 @@ body.hashChanged {
 	100% {
 		filter: none;
 	}
-}
-
-.flex {
-	display: flex;
-}
-
-.flex--md-up {
-	@media @q-md-min {
-		display: flex;
-	}
-}
-
-.flex--row {
-	flex-direction: row;
-}
-
-.flex--row-md-up {
-	flex-direction: column;
-
-	@media @q-md-min {
-		flex-direction: row;
-	}
-}
-
-.flex--column {
-	flex-direction: column;
 }
