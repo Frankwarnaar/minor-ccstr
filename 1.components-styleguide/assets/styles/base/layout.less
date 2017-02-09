@@ -10,14 +10,22 @@ html {
 }
 
 body {
-	.font-primary;
 	&:extend(.font-size-base);
+	.font-primary;
+	.flex;
+	.flex--column;
 
 	width: 100%;
 	min-height: 100%;
 
 	background: @color-lightest;
 	color: @color-gray-midnight;
+	justify-content: center;
+
+	@media @q-lg-min {
+		.flex--row;
+		flex-wrap: wrap;
+	}
 }
 
 :target {
