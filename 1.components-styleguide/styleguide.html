@@ -55,7 +55,7 @@
 
 		<section id="chat">
 			<ol>
-				<li class="chats__single chat">
+				<li class="chats__single chat" data-receiver='false'>
 
 					<p class="chat__message">
 						Hey!
@@ -67,7 +67,7 @@
 					</footer>
 
 				</li>
-				<li class="chats__single chat">
+				<li class="chats__single chat" data-receiver='true'>
 
 					<p class="chat__message">
 						Hey! Sorry I was busy
@@ -78,7 +78,7 @@
 					</footer>
 
 				</li>
-				<li class="chats__single chat">
+				<li class="chats__single chat" data-receiver='false'>
 
 					<p class="chat__message">
 						I sent that 2 years ago
@@ -94,7 +94,7 @@
 
 			<form class="form--inline" action="/" method="post">
 
-				<label class="hidden" for="field-message">Message</label>
+				<label for="field-message">Message</label>
 				<textarea name="field-message" id="field-message"></textarea>
 
 				<button type="submit">Send</button>

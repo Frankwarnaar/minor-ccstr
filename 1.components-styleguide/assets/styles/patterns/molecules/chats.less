@@ -1,6 +1,7 @@
 .chat {
 	.flex;
 	.flex--column;
+	width: 90%;
 	padding: .5rem;
 	margin: 1rem 0;
 
@@ -34,6 +35,10 @@
 			transform: translateY(-50%);
 		}
 	}
+}
+
+[data-receiver="false"] {
+	float: right;
 }
 
 .chat__message {
