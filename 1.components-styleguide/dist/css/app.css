@@ -20,11 +20,12 @@ html {
   min-height: 100%;
 }
 body {
-  font-family: 'helvetica', sans-serif;
   width: 100%;
   min-height: 100%;
   background: #fff;
   color: #41484e;
+  font-size: 1em;
+  font-family: 'helvetica', sans-serif;
 }
 body > h1 {
   padding-left: 1rem;
@@ -61,169 +62,6 @@ body.hashChanged article:not(:target) {
     filter: none;
   }
 }
-/* ==================================================
-	Font familes
-   ================================================== */
-.font-primary {
-  font-family: 'helvetica', sans-serif;
-}
-/* ==================================================
-	Font weights
-   ================================================== */
-.font-weight-bold {
-  font-weight: 700;
-}
-.font-weight-semibold {
-  font-weight: 600;
-}
-.font-weight-medium {
-  font-weight: 500;
-}
-.font-weight-regular {
-  font-weight: 400;
-}
-.font-weight-light {
-  font-weight: 300;
-}
-.font-weight-thin {
-  font-weight: 200;
-}
-.font-weight-ultralight {
-  font-weight: 100;
-}
-/* ==================================================
-	Font sizes
-   ================================================== */
-.font-size-xxxs {
-  font-size: calc(0.95em / (1.2 * 1.2 * 1.2 * 1.2));
-}
-.font-size-xxs,
-nav .list-item--has-children > a:after {
-  font-size: calc(0.95em / (1.2 * 1.2 * 1.2));
-}
-.font-size-xs {
-  font-size: calc(0.95em / (1.2 * 1.2));
-}
-.font-size-sm,
-h6,
-input,
-textarea,
-.chat footer {
-  font-size: calc(0.95em / (1.2));
-}
-.font-size-base,
-body {
-  font-size: 0.95em;
-}
-.font-size-md,
-h5,
-button {
-  font-size: calc(0.95em * (1.2));
-}
-.font-size-lg,
-h4 {
-  font-size: calc(0.95em * (1.2 * 1.2));
-}
-.font-size-xl,
-h3 {
-  font-size: calc(0.95em * (1.2 * 1.2 * 1.2));
-}
-.font-size-xxl,
-h2 {
-  font-size: calc(0.95em * (1.2 * 1.2 * 1.2 * 1.2));
-}
-.font-size-xxxl,
-h1 {
-  font-size: calc(0.95em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
-}
-@media screen and (min-width: 48.01rem ) {
-  .font-size-xxxs {
-    font-size: calc(1em / (1.2 * 1.2 * 1.2 * 1.2));
-  }
-  .font-size-xxs,
-  nav .list-item--has-children > a:after {
-    font-size: calc(1em / (1.2 * 1.2 * 1.2));
-  }
-  .font-size-xs {
-    font-size: calc(1em / (1.2 * 1.2));
-  }
-  .font-size-sm,
-  h6,
-  input,
-  textarea,
-  .chat footer {
-    font-size: calc(1em / (1.2));
-  }
-  .font-size-base,
-  body {
-    font-size: 1em;
-  }
-  .font-size-md,
-  h5,
-  button {
-    font-size: calc(1em * (1.2));
-  }
-  .font-size-lg,
-  h4 {
-    font-size: calc(1em * (1.2 * 1.2));
-  }
-  .font-size-xl,
-  h3 {
-    font-size: calc(1em * (1.2 * 1.2 * 1.2));
-  }
-  .font-size-xxl,
-  h2 {
-    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
-  }
-  .font-size-xxxl,
-  h1 {
-    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
-  }
-}
-@media screen and (min-width: 62.01rem ) {
-  .font-size-xxxs {
-    font-size: calc(1em / (1.2 * 1.2 * 1.2 * 1.2));
-  }
-  .font-size-xxs,
-  nav .list-item--has-children > a:after {
-    font-size: calc(1em / (1.2 * 1.2 * 1.2));
-  }
-  .font-size-xs {
-    font-size: calc(1em / (1.2 * 1.2));
-  }
-  .font-size-sm,
-  h6,
-  input,
-  textarea,
-  .chat footer {
-    font-size: calc(1em / (1.2));
-  }
-  .font-size-base,
-  body {
-    font-size: 1em;
-  }
-  .font-size-md,
-  h5,
-  button {
-    font-size: calc(1em * (1.2));
-  }
-  .font-size-lg,
-  h4 {
-    font-size: calc(1em * (1.2 * 1.2));
-  }
-  .font-size-xl,
-  h3 {
-    font-size: calc(1em * (1.2 * 1.2 * 1.2));
-  }
-  .font-size-xxl,
-  h2 {
-    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
-  }
-  .font-size-xxxl,
-  h1 {
-    font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
-  }
-}
 h1,
 h2,
 h3,
@@ -231,6 +69,24 @@ h4,
 h5,
 h6 {
   margin: .8em 0;
+}
+h1 {
+  font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
+}
+h2 {
+  font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
+}
+h3 {
+  font-size: calc(1em * (1.2 * 1.2 * 1.2));
+}
+h4 {
+  font-size: calc(1em * (1.2 * 1.2));
+}
+h5 {
+  font-size: calc(1em * (1.2));
+}
+h6 {
+  font-size: calc(1em / (1.2));
 }
 p {
   line-height: 150%;
@@ -247,27 +103,6 @@ p {
 }
 [data-status="DELIVERED"] {
   background: #60c5f8;
-}
-.spacing-xs {
-  margin: 0.325rem 0;
-}
-.spacing-sm {
-  margin: 0.5rem 0;
-}
-.spacing-md {
-  margin: 0.825rem 0;
-}
-.spacing-lg {
-  margin: 1rem 0;
-}
-.spacing-xl {
-  margin: 2rem 0;
-}
-.spacing-xxl {
-  margin: 4rem 0;
-}
-.spacing-xxxl {
-  margin: 8rem 0;
 }
 .flex,
 nav,
@@ -509,6 +344,7 @@ nav .list-item--has-children {
   width: 6.5em;
 }
 nav .list-item--has-children > a:after {
+  font-size: calc(1em / (1.2 * 1.2 * 1.2));
   content: ' ▼';
 }
 nav .list-item--has-children ul {

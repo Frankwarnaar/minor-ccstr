@@ -10,14 +10,15 @@ html {
 }
 
 body {
-	&:extend(.font-size-base);
-	.font-primary;
 
 	width: 100%;
 	min-height: 100%;
 
 	background: @color-lightest;
 	color: @color-gray-midnight;
+
+	font-size: @font-size-base;
+	font-family: @font-primary;
 
 	> h1 {
 		padding-left: 1rem;
