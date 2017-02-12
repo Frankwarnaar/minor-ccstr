@@ -314,11 +314,12 @@ textarea {
   background: #fff;
   box-shadow: none;
   outline: none;
+  transition: 0.1s ease-in-out;
 }
 input:focus,
 textarea:focus {
   border: none;
-  border-bottom: 1px solid #ffc75e;
+  border-bottom: 1px solid #60c5f8;
   outline: none;
 }
 .input-label-group {
@@ -333,6 +334,13 @@ textarea:focus {
 }
 .input-label-group label {
   padding: 0;
+  cursor: pointer;
+}
+.input-label-group input + label {
+  transition: border-bottom 0.1s ease-in-out;
+}
+.input-label-group input:checked + label {
+  color: #60c5f8;
 }
 button {
   padding: 0 .5rem;

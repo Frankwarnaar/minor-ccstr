@@ -14,10 +14,11 @@ textarea {
 	background: @color-lightest;
 	box-shadow: none;
 	outline: none;
+	transition: @transition-fastest;
 
 	&:focus {
 		border: none;
-		border-bottom: 1px solid @color-primary-lightest;
+		border-bottom: 1px solid @color-secondary;
 		outline: none;
 	}
 }
@@ -35,5 +36,15 @@ textarea {
 
 	label {
 		padding: 0;
+		cursor: pointer;
+	}
+
+	input + label {
+
+		transition: border-bottom @transition-fastest;
+	}
+
+	input:checked + label {
+		color: @color-highlight-info;
 	}
 }
