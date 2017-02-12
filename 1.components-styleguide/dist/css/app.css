@@ -373,6 +373,16 @@ a:hover,
 a:focus {
   color: #ffb52b;
 }
+a h1,
+a h2,
+a h3,
+a h4,
+a h5,
+a h6,
+a p,
+a span {
+  color: #41484e;
+}
 time,
 datetime {
   font-weight: 600;
