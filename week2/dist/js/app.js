@@ -1,12 +1,13 @@
-/*jshint esversion: 6 */
-'use strict';
+"use strict";
 
+/*jshint esversion: 6 */
 (function () {
-    window.addEventListener('hashchange', function () {
-        var body = document.querySelector('body');
-        body.classList.remove('hashChanged');
-        setTimeout(function () {
-            body.classList.add('hashChanged');
-        }, 1);
-    });
+    // 'use strict';
+    // window.addEventListener('hashchange', () => {
+    //     const body = document.querySelector('body');
+    //     body.classList.remove('hashChanged');
+    //     setTimeout(() => {
+    //         body.classList.add('hashChanged');
+    //     }, 1);
+    // });
 })();
