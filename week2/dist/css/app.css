@@ -187,13 +187,7 @@ textarea:focus {
 }
 .custom-checkbox input {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 .custom-checkbox div {
   margin-right: .5rem;
@@ -201,6 +195,7 @@ textarea:focus {
   height: 1.325rem;
   display: inline-block;
   position: relative;
+  top: 2px;
   border: 2px solid #F7A100;
   background: none;
   transition: 0.1s ease-in-out;
@@ -220,6 +215,9 @@ textarea:focus {
 }
 .custom-checkbox input:checked + div:before {
   opacity: 1;
+}
+.custom-checkbox input:focus + div {
+  border-color: #60c5f8;
 }
 button {
   font-size: calc(1em * (1.2));

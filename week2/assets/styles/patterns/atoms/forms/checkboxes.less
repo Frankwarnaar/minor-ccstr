@@ -9,13 +9,7 @@
 
     input {
         position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
         clip: rect(0,0,0,0);
-        border: 0;
     }
 
     div {
@@ -25,6 +19,7 @@
 
         display: inline-block;
         position: relative;
+        top: 2px;
 
         border: 2px solid @color-primary;
         background: none;
@@ -46,8 +41,13 @@
 
     input:checked + div {
         background: @color-primary;
+
         &:before {
             opacity: 1;
         }
+    }
+
+    input:focus + div {
+        border-color: @color-secondary;
     }
 }
