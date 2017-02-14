@@ -42,6 +42,12 @@ nav {
 		&:hover {
 			color: @color-gray-clouds;
 		}
+
+		&:focus {
+			color: @color-gray-clouds;
+			outline: none;
+			border-bottom: 1px solid @color-gray-clouds;
+		}
 	}
 
 	> a {
@@ -94,6 +100,8 @@ nav {
 
 			background: @color-primary;
 			text-align: left;
+			position: relative;
+			z-index: 1;
 
 			a {
 				line-height: 2rem;
