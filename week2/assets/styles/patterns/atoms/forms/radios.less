@@ -1,0 +1,54 @@
+.custom-radio {
+    vertical-align: middle;
+    cursor: pointer;
+
+    label {
+        line-height: 1.325rem;
+    }
+
+    input {
+        position: absolute;
+        clip: rect(0,0,0,0);
+    }
+
+    div {
+        margin-right: .5rem;
+        width: 1.325rem;
+        height: 1.325rem;
+
+        border-radius: 50%;
+
+        display: inline-block;
+        position: relative;
+        top: 2px;
+
+        border: 2px solid @color-primary;
+        background: none;
+        transition: @transition-fastest;
+
+        &:before {
+            content: '✓';
+
+            position: absolute;
+            top: 60%;
+            left: 50%;
+
+            color: @color-lightest;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: @transition-fastest;
+        }
+    }
+
+    input:checked + div {
+        background: @color-primary;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    input:focus + div {
+        border-color: @color-secondary;
+    }
+}

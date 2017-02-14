@@ -219,6 +219,48 @@ textarea:focus {
 .custom-checkbox input:focus + div {
   border-color: #60c5f8;
 }
+.custom-radio {
+  vertical-align: middle;
+  cursor: pointer;
+}
+.custom-radio label {
+  line-height: 1.325rem;
+}
+.custom-radio input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.custom-radio div {
+  margin-right: .5rem;
+  width: 1.325rem;
+  height: 1.325rem;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  border: 2px solid #F7A100;
+  background: none;
+  transition: 0.1s ease-in-out;
+}
+.custom-radio div:before {
+  content: '✓';
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.1s ease-in-out;
+}
+.custom-radio input:checked + div {
+  background: #F7A100;
+}
+.custom-radio input:checked + div:before {
+  opacity: 1;
+}
+.custom-radio input:focus + div {
+  border-color: #60c5f8;
+}
 button {
   font-size: calc(1em * (1.2));
   padding: 0 .5rem;
@@ -374,6 +416,28 @@ form a {
 .step-indicator li {
   width: 25%;
   text-align: center;
+}
+.rating {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 40em;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (min-width: 36.01rem ) {
+  .rating .custom-radio {
+    display: inline-block;
+    float: left;
+  }
+}
+.rating svg {
+  max-width: 1.325rem;
+  max-height: 1.325rem;
+  position: relative;
+  top: 2px;
+}
+.rating input {
+  display: inline-block;
 }
 article {
   padding: 2rem 1rem;

@@ -1,0 +1,27 @@
+.rating {
+    padding: 2rem 1rem;
+    margin: 0 auto;
+
+    max-width: 40em;
+
+    display: flex;
+    flex-direction: row;
+
+    .custom-radio {
+        @media @q-sm-min {
+            display: inline-block;
+            float: left;
+        }
+    }
+
+    svg {
+        max-width: 1.325rem;
+        max-height: 1.325rem;
+        position: relative;
+        top: 2px;
+    }
+
+    input {
+        display: inline-block;
+    }
+}
