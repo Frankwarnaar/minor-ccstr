@@ -14,7 +14,7 @@
 	<h1>Living Styleguide</h1>
 
 	<!-- place components or patterns here -->
-	<nav>
+	<nav class="navigation">
 		<h1>Main navigation</h1>
 
 		<ul id="nav" class="list--clean">
@@ -38,7 +38,7 @@
 		</a>
 	</nav>
 
-	<nav>
+	<nav class="navigation">
 		<h2>Jump to components</h2>
 		<ul class="list--clean">
 			<li><a href="#media-item">Media item</a></li>
@@ -150,6 +150,29 @@
 			</footer>
 		</figcaption>
 	</article>
+
+	<nav class="step-indicator">
+
+	    <h1>Finish your order</h1>
+
+	    <progress value="0.25" max="1">25%</progress>
+
+	    <ol>
+	        <li>
+	            <a href="/cart">Cart</a>
+	        </li>
+	        <li>
+	            <a href="#main-content" aria-label="Address, current step">Address</a>
+	        </li>
+	        <li>
+	            Payment
+	        </li>
+	        <li>
+	            Confirm
+	        </li>
+	    </ol>
+
+	</nav>
 	<script src="./dist/js/app.js" type="text/javascript"></script>
 </body>
 

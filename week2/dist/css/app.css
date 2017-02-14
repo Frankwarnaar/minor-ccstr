@@ -105,8 +105,8 @@ p {
   background: #60c5f8;
 }
 .flex,
-nav,
-nav > ul {
+.navigation,
+.navigation > ul {
   display: flex;
 }
 @media screen and (min-width: 48.01rem ) {
@@ -122,8 +122,8 @@ nav > ul {
   }
 }
 .flex--row,
-nav,
-nav > ul {
+.navigation,
+.navigation > ul {
   flex-direction: row;
 }
 .flex--row-md-up {
@@ -265,6 +265,11 @@ time,
 datetime {
   font-weight: 600;
 }
+progress {
+  width: 100%;
+  height: 1rem;
+  border-radius: 0;
+}
 ol {
   padding: 0;
   margin: 0;
@@ -357,6 +362,19 @@ form a {
   bottom: 0;
   left: 0;
 }
+.step-indicator {
+  max-width: 40em;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+.step-indicator ol {
+  display: flex;
+  max-width: 100%;
+}
+.step-indicator li {
+  width: 25%;
+  text-align: center;
+}
 article {
   padding: 2rem 1rem;
   margin: 0 auto;
@@ -381,7 +399,7 @@ section {
   padding: 2rem 1rem;
   margin: 0 auto;
 }
-nav {
+.navigation {
   padding: 0 1rem;
   margin-bottom: 1rem;
   width: 100%;
@@ -391,72 +409,72 @@ nav {
   background: #F7A100;
   color: #fff;
 }
-nav h1,
-nav h2 {
+.navigation h1,
+.navigation h2 {
   margin: 0;
   display: inline-block;
   line-height: 52px;
 }
-nav > ul {
+.navigation > ul {
   flex-wrap: wrap;
   float: right;
 }
-nav li {
+.navigation li {
   display: inline-block;
 }
-nav a {
+.navigation a {
   color: #fff;
   text-decoration: none;
   font-weight: 400;
   padding: .5rem;
   line-height: 52px;
 }
-nav a:hover {
+.navigation a:hover {
   color: #ecf0f1;
 }
-nav a:focus {
+.navigation a:focus {
   color: #ecf0f1;
   outline: none;
   border-bottom: 1px solid #ecf0f1;
 }
-nav > a {
+.navigation > a {
   width: 3rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
-nav > a span {
+.navigation > a span {
   margin: 0 auto;
   width: 80%;
   height: 3px;
   background: #fff;
   position: relative;
 }
-nav > a span:before,
-nav > a span:after {
+.navigation > a span:before,
+.navigation > a span:after {
   content: ' ';
   width: 100%;
   height: 3px;
   background: #fff;
 }
-nav > a span:before {
+.navigation > a span:before {
   position: absolute;
   top: -1rem;
 }
-nav > a span:after {
+.navigation > a span:after {
   position: absolute;
   bottom: -1rem;
 }
-nav .list-item--has-children {
+.navigation .list-item--has-children {
   position: relative;
   width: 6.5em;
 }
-nav .list-item--has-children > a:after {
+.navigation .list-item--has-children > a:after {
   font-size: calc(1em / (1.2 * 1.2 * 1.2));
   content: ' ▼';
 }
-nav .list-item--has-children ul {
+.navigation .list-item--has-children ul {
   display: flex;
   flex-direction: row;
   background: #F7A100;
@@ -464,11 +482,11 @@ nav .list-item--has-children ul {
   position: relative;
   z-index: 1;
 }
-nav .list-item--has-children ul a {
+.navigation .list-item--has-children ul a {
   line-height: 2rem;
 }
 @media screen and (min-width: 36.01rem ) {
-  nav .list-item--has-children ul {
+  .navigation .list-item--has-children ul {
     flex-direction: column;
     display: none;
     position: absolute;
@@ -478,12 +496,12 @@ nav .list-item--has-children ul a {
   }
 }
 @media screen and (min-width: 36.01rem ) {
-  nav .list-item--has-children:hover ul {
+  .navigation .list-item--has-children:hover ul {
     display: block;
   }
 }
 @media screen and (min-width: 48.01rem ) {
-  nav {
+  .navigation {
     max-height: 52px;
   }
 }
