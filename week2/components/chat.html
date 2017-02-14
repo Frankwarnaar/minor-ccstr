@@ -1,0 +1,47 @@
+<link href="../dist/css/app.css" rel="stylesheet" type="text/css"/>
+<ol class="chats-list list--clean">
+	<li class="chats__single chat">
+
+		<p class="chat__message">
+			Hey!
+		</p>
+
+		<footer>
+			<p class="chat__status">Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+			<p class="chat__status" data-status="READ">Has been read</p>
+		</footer>
+
+	</li>
+	<li class="chats__single chat">
+
+		<p class="chat__message">
+			Hey! Sorry I was busy
+		</p>
+
+		<footer>
+			<p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+		</footer>
+
+	</li>
+	<li class="chats__single chat">
+
+		<p class="chat__message">
+			I sent that 2 years ago
+		</p>
+
+		<footer>
+			<p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+			<p data-status="DELIVERED">Has been delivered</p>
+		</footer>
+
+	</li>
+</ol>
+
+<form class="form--inline" action="/" method="post">
+
+	<label class="hidden" for="field-message">Message</label>
+	<textarea name="field-message" id="field-message"></textarea>
+
+	<button type="submit">Send</button>
+
+</form>
