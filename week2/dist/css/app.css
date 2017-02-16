@@ -436,9 +436,16 @@ form a {
 .rating {
   padding: 2rem 1rem;
   margin: 0 auto;
+  margin-top: 1rem;
   max-width: 40em;
+  padding-top: 1rem;
+  border: none;
   display: flex;
   flex-direction: row;
+}
+.rating legend {
+  font-weight: 700;
+  font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
 }
 @media screen and (min-width: 36.01rem ) {
   .rating .custom-radio {
