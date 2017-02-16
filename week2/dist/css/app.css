@@ -24,7 +24,7 @@ body {
   min-height: 100%;
   background: #fff;
   color: #41484e;
-  font-size: 1em;
+  font-size: calc(.8em + .3vw);
   font-family: 'helvetica', sans-serif;
 }
 body > h1 {
@@ -71,22 +71,22 @@ h6 {
   margin: .8em 0;
 }
 h1 {
-  font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2 * 1.2 * 1.2 * 1.2 * 1.2));
 }
 h2 {
-  font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2 * 1.2 * 1.2 * 1.2));
 }
 h3 {
-  font-size: calc(1em * (1.2 * 1.2 * 1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2 * 1.2 * 1.2));
 }
 h4 {
-  font-size: calc(1em * (1.2 * 1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2 * 1.2));
 }
 h5 {
-  font-size: calc(1em * (1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2));
 }
 h6 {
-  font-size: calc(1em / (1.2));
+  font-size: calc(calc(.8em + .3vw) / (1.2));
 }
 p {
   line-height: 150%;
@@ -225,6 +225,7 @@ textarea:focus {
 }
 .custom-radio label {
   line-height: 1.325rem;
+  cursor: pointer;
 }
 .custom-radio input {
   position: absolute;
@@ -245,7 +246,7 @@ textarea:focus {
 .custom-radio div:before {
   content: '✓';
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   color: #fff;
   transform: translate(-50%, -50%);
@@ -262,10 +263,10 @@ textarea:focus {
   border-color: #60c5f8;
 }
 button {
-  font-size: calc(1em * (1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2));
   padding: 0 .5rem;
-  height: 40px;
-  line-height: 40px;
+  height: 2.5rem;
+  line-height: 2.5rem;
   border: none;
   background: #F7A100;
   font-weight: 400;
@@ -394,7 +395,7 @@ form a {
 .form--inline input,
 .form--inline textarea {
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
 }
 .form--validate {
   padding: .5rem;
@@ -445,7 +446,7 @@ form a {
 }
 .rating legend {
   font-weight: 700;
-  font-size: calc(1em * (1.2 * 1.2 * 1.2 * 1.2));
+  font-size: calc(calc(.8em + .3vw) * (1.2 * 1.2 * 1.2 * 1.2));
 }
 @media screen and (min-width: 36.01rem ) {
   .rating .custom-radio {
@@ -501,7 +502,7 @@ section {
 .navigation h2 {
   margin: 0;
   display: inline-block;
-  line-height: 52px;
+  line-height: 3.3rem;
 }
 .navigation > ul {
   flex-wrap: wrap;
@@ -515,7 +516,7 @@ section {
   text-decoration: none;
   font-weight: 400;
   padding: .5rem;
-  line-height: 52px;
+  line-height: 3.3rem;
 }
 .navigation a:hover {
   color: #ecf0f1;
@@ -559,7 +560,7 @@ section {
   width: 6.5em;
 }
 .navigation .list-item--has-children > a:after {
-  font-size: calc(1em / (1.2 * 1.2 * 1.2));
+  font-size: calc(calc(.8em + .3vw) / (1.2 * 1.2 * 1.2));
   content: ' ▼';
 }
 .navigation .list-item--has-children ul {
@@ -590,6 +591,6 @@ section {
 }
 @media screen and (min-width: 48.01rem ) {
   .navigation {
-    max-height: 52px;
+    max-height: 3.3rem;
   }
 }
