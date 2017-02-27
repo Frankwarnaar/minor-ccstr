@@ -1,6 +1,6 @@
 .navigation {
-	&:extend(.flex);
-	&:extend(.flex--row);
+	display: flex;
+	flex-direction: column;
 	padding: 0 1rem;
 	margin-bottom: 1rem;
 	width: 100%;
@@ -10,8 +10,14 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 
+	text-align: center;
 	background: @color-primary;
 	color: @color-lightest;
+
+	@media @q-md-min {
+		flex-direction: row;
+		text-align: left;
+	}
 
 	h1,
 	h2 {
@@ -28,16 +34,26 @@
 	}
 
 	li {
-		display: inline-block;
+		display: block;
+		width: 100%;
+
+		@media @q-md-min {
+			display: inline-block;
+			width: auto;
+		}
+	}
+
+	[aria-label] {
+		font-weight: @font-weight-bold;
 	}
 
 	a {
 		color: @color-lightest;
 		text-decoration: none;
 		font-weight: @font-weight-regular;
+		line-height: 2rem;
 
 		padding: .5rem;
-		line-height: @nav-height;
 
 		&:hover {
 			color: @color-gray-clouds;
@@ -47,6 +63,10 @@
 			color: @color-gray-clouds;
 			outline: none;
 			border-bottom: 1px solid @color-gray-clouds;
+		}
+
+		@media @q-md-min {
+			line-height: @nav-height;
 		}
 	}
 
@@ -85,9 +105,12 @@
 		}
 	}
 
-	.list-item--has-children {
+	&:first-of-type > ul > li:nth-child(2) {
 		position: relative;
-		width: 6.5em;
+
+		@media @q-md-min {
+			width: 6.5em;
+		}
 
 		> a:after {
 			font-size: @font-size-xxs;
@@ -96,19 +119,30 @@
 
 		ul {
 			.flex;
-			.flex--row;
+			.flex--column;
 
 			background: @color-primary;
-			text-align: left;
 			position: relative;
 			z-index: 1;
 
-			a {
-				line-height: 2rem;
+			li {
+				width: 100%;
+
+				@media @q-md-min {
+					width: auto;
+				}
 			}
 
-			@media @q-sm-min {
-				.flex--column;
+			a {
+				line-height: 1.5rem;
+				font-size: @font-size-sm;
+
+				@media @q-md-min {
+					line-height: 2rem;
+				}
+			}
+
+			@media @q-md-min {
 				display: none;
 
 				position: absolute;
@@ -116,12 +150,11 @@
 				left: 0;
 				right: 0;
 			}
-
 		}
 
 		&:hover {
 			ul {
-				@media @q-sm-min {
+				@media @q-md-min {
 					display: block;
 				}
 			}
