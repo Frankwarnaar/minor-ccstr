@@ -346,6 +346,7 @@ ol {
 .chats form {
   display: flex;
   flex-direction: row;
+  box-shadow: none;
 }
 .chats form input,
 .chats form textarea {
@@ -358,10 +359,11 @@ ol {
 form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  padding: .5rem 0;
-  min-width: 14rem;
-  max-width: 30rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  min-width: 14em;
+  max-width: 40em;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   clear: both;
 }
 form a {
@@ -379,8 +381,7 @@ fieldset legend {
   top: 2rem;
 }
 .form--validate {
-  padding: .5rem;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 .form--validate input {
   transition: background 0.3s ease-in-out;
