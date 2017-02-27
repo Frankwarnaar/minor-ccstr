@@ -339,9 +339,6 @@ ol {
   max-width: 30rem;
   order: -1;
 }
-.chats {
-  margin: 0 auto;
-}
 .chat {
   display: flex;
   flex-direction: column;
@@ -350,7 +347,12 @@ ol {
   margin: 1rem 0;
   background: #ecf0f1;
 }
+.chat > p {
+  padding-top: .325rem;
+  font-weight: 400;
+}
 .chat footer {
+  font-size: calc(calc(.8em + .3vw) / (1.12));
   display: flex;
   flex-direction: row;
   position: relative;
@@ -374,10 +376,6 @@ ol {
 }
 [data-receiver="false"] {
   float: right;
-}
-.chat__message {
-  padding-top: .325rem;
-  font-weight: 400;
 }
 form {
   display: flex;

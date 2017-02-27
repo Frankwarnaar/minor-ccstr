@@ -1,7 +1,3 @@
-.chats {
-	margin: 0 auto;
-}
-
 .chat {
 	.flex;
 	.flex--column;
@@ -11,8 +7,13 @@
 
 	background: @color-gray-clouds;
 
+	> p {
+		padding-top: .325rem;
+		font-weight: @font-weight-regular;
+	}
+
 	footer {
-		&:extend(.font-size-sm);
+		font-size: @font-size-sm;
 		.flex;
 		.flex--row;
 
@@ -45,7 +46,3 @@
 	float: right;
 }
 
-.chat__message {
-	padding-top: .325rem;
-	font-weight: @font-weight-regular;
-}
