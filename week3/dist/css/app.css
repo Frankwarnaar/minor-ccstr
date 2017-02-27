@@ -180,65 +180,24 @@ textarea:focus {
 .input-label-group input:checked + label {
   color: #60c5f8;
 }
-.custom-checkbox {
-  display: flex;
-  flex-direction: row;
-  vertical-align: middle;
-}
-.custom-checkbox label {
-  line-height: 1.325rem;
-}
-.custom-checkbox input {
+input[type='checkbox'] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
-.custom-checkbox div {
-  margin-right: .5rem;
-  width: 1.325rem;
-  height: 1.325rem;
-  display: inline-block;
-  position: relative;
-  top: 2px;
-  border: 2px solid #F7A100;
-  background: none;
-  transition: 0.1s ease-in-out;
-}
-.custom-checkbox div:before {
-  content: '✓';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.1s ease-in-out;
-}
-.custom-checkbox input:checked + div {
-  background: #F7A100;
-}
-.custom-checkbox input:checked + div:before {
+input[type='checkbox']:checked:before {
   opacity: 1;
 }
-.custom-checkbox input:focus + div {
+input[type='checkbox']:checked:after {
+  background: #F7A100;
+}
+input[type='checkbox']:focus:after {
   border-color: #60c5f8;
 }
-.custom-radio {
-  vertical-align: middle;
-  cursor: pointer;
-}
-.custom-radio label {
-  line-height: 1.325rem;
-  cursor: pointer;
-}
-.custom-radio input {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-.custom-radio div {
+input[type='checkbox'] + label:before {
+  content: '';
   margin-right: .5rem;
   width: 1.325rem;
   height: 1.325rem;
-  border-radius: 50%;
   display: inline-block;
   position: relative;
   top: 2px;
@@ -246,23 +205,33 @@ textarea:focus {
   background: none;
   transition: 0.1s ease-in-out;
 }
-.custom-radio div:before {
-  content: '✓';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.1s ease-in-out;
-}
-.custom-radio input:checked + div {
+input[type='checkbox']:checked + label:before {
   background: #F7A100;
 }
-.custom-radio input:checked + div:before {
-  opacity: 1;
+input[type='checkbox']:focus + label:before {
+  border-color: #60c5f8;
 }
-.custom-radio input:focus + div {
+input[type='radio'] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+input[type='radio'] + label:before {
+  content: '';
+  margin-right: .5rem;
+  width: 1.325rem;
+  height: 1.325rem;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  border: 2px solid #F7A100;
+  border-radius: 50%;
+  background: none;
+  transition: 0.1s ease-in-out;
+}
+input[type='radio']:checked + label:before {
+  background: #F7A100;
+}
+input[type='radio']:focus + label:before {
   border-color: #60c5f8;
 }
 button {
@@ -339,7 +308,7 @@ ol {
   max-width: 30rem;
   order: -1;
 }
-.chat {
+.chats li {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -347,11 +316,11 @@ ol {
   margin: 1rem 0;
   background: #ecf0f1;
 }
-.chat > p {
+.chats li > p {
   padding-top: .325rem;
   font-weight: 400;
 }
-.chat footer {
+.chats li footer {
   font-size: calc(calc(.8em + .3vw) / (1.12));
   display: flex;
   flex-direction: row;
@@ -364,15 +333,24 @@ ol {
   border-bottom: 1px solid #F7A100;
   vertical-align: middle;
 }
-.chat footer p:first-child {
+.chats li footer p:first-child {
   max-width: 55%;
 }
-.chat footer p:nth-child(2) {
+.chats li footer p:nth-child(2) {
   max-width: 45%;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+.chats form {
+  display: flex;
+  flex-direction: row;
+}
+.chats form input,
+.chats form textarea {
+  width: 100%;
+  height: 2.5rem;
 }
 [data-receiver="false"] {
   float: right;
@@ -389,14 +367,16 @@ form {
 form a {
   padding: .5rem 0;
 }
-.form--inline {
-  display: flex;
-  flex-direction: row;
+fieldset {
+  padding: 1rem;
+  padding-top: 2.825rem;
+  margin: 1rem auto;
+  background: #fff;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
-.form--inline input,
-.form--inline textarea {
-  width: 100%;
-  height: 2.5rem;
+fieldset legend {
+  position: relative;
+  top: 2rem;
 }
 .form--validate {
   padding: .5rem;
@@ -413,13 +393,18 @@ form a {
 }
 aside {
   padding: 1rem;
-  margin: 0 auto 1rem;
-  max-width: 24em;
+  margin: 1rem 0;
   background: #fff;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 36.01rem ) {
+  aside {
+    margin: 0 auto 1rem;
+    max-width: 24em;
+  }
 }
 aside article {
   position: relative;
@@ -479,11 +464,7 @@ aside article:first-of-type img {
   text-align: center;
 }
 .rating {
-  padding: 2rem 1rem;
-  margin: 0 auto;
-  margin-top: 1rem;
   max-width: 40em;
-  padding-top: 1rem;
   border: none;
   display: flex;
   flex-direction: row;

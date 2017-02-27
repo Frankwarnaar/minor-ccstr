@@ -1,53 +1,49 @@
-.custom-checkbox {
-    display: flex;
-    flex-direction: row;
-    vertical-align: middle;
+input[type='checkbox'] {
+	position: absolute;
+	clip: rect(0,0,0,0);
 
-    label {
-        line-height: 1.325rem;
-    }
+	&:before {
 
-    input {
-        position: absolute;
-        clip: rect(0,0,0,0);
-    }
+	}
 
-    div {
-        margin-right: .5rem;
-        width: 1.325rem;
-        height: 1.325rem;
+	&:after {
 
-        display: inline-block;
-        position: relative;
-        top: 2px;
+	}
 
-        border: 2px solid @color-primary;
-        background: none;
-        transition: @transition-fastest;
+	&:checked {
+		&:before {
+			opacity: 1;
+		}
 
-        &:before {
-            content: '✓';
+		&:after {
+			background: @color-primary;
+		}
+	}
 
-            position: absolute;
-            top: 50%;
-            left: 50%;
+	&:focus:after {
+		border-color: @color-secondary;
+	}
+}
 
-            color: @color-lightest;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-            transition: @transition-fastest;
-        }
-    }
+input[type='checkbox'] + label:before {
+	content: '';
+	margin-right: .5rem;
+	width: 1.325rem;
+	height: 1.325rem;
 
-    input:checked + div {
-        background: @color-primary;
+	display: inline-block;
+	position: relative;
+	top: 2px;
 
-        &:before {
-            opacity: 1;
-        }
-    }
+	border: 2px solid @color-primary;
+	background: none;
+	transition: @transition-fastest;
+}
 
-    input:focus + div {
-        border-color: @color-secondary;
-    }
+input[type='checkbox']:checked + label:before {
+	background: @color-primary
+}
+
+input[type='checkbox']:focus + label:before {
+	border-color: @color-secondary;
 }

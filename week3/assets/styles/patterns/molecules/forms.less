@@ -15,14 +15,17 @@ form {
 
 }
 
-.form--inline {
-	.flex;
-	.flex--row;
+fieldset {
+	padding: 1rem;
+	padding-top: 2.825rem;
+	margin: 1rem auto;
 
-	input,
-	textarea {
-		width: 100%;
-		height: @btn-height;
+	background: @color-lightest;
+	box-shadow: 0 0 1rem 0 rgba(0,0,0,.2);
+
+	legend {
+		position: relative;
+		top: 2rem;
 	}
 }
 
@@ -42,3 +45,4 @@ form {
 		border-color: @color-highlight-success-lightest;
 	}
 }
+

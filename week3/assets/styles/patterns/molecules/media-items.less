@@ -1,7 +1,6 @@
 aside {
 	padding: 1rem;
-	margin: 0 auto 1rem;;
-	max-width: 24em;
+	margin: 1rem 0;
 
 	background: @color-lightest;
 	box-shadow: 0 0 1rem 0 rgba(0,0,0,.2);
@@ -9,6 +8,11 @@ aside {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+
+	@media @q-sm-min {
+		margin: 0 auto 1rem;
+		max-width: 24em;
+	}
 
 	article {
 		position: relative;
