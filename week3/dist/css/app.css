@@ -73,7 +73,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 .8em;
+  margin: .1em 0 .8em;
 }
 h1 {
   font-size: calc(calc(.8em + .3vw) * (1.12 * 1.12 * 1.12 * 1.12 * 1.12));
@@ -413,19 +413,59 @@ form a {
 .form--validate:valid {
   border-color: #ceffe9;
 }
-.media-item {
+aside {
+  padding: 1rem;
+  margin: 0 auto 1rem;
+  max-width: 24em;
+  background: #fff;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+aside article {
   position: relative;
+  border: 1px solid #ecf0f1;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
 }
-.media-item a {
+aside article a {
   text-decoration: none;
+  order: 2;
 }
-.media-item a:after {
+aside article img {
+  order: 1;
+  height: auto;
+  width: 100%;
+  display: none;
+}
+aside article p {
+  order: 3;
+}
+aside article a:after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+aside article:not(:first-of-type) h1 {
+  margin-bottom: 0;
+  font-size: calc(calc(.8em + .3vw) * (1.12 * 1.12 * 1.12));
+}
+aside article p {
+  display: none;
+}
+aside article:first-of-type p {
+  display: block;
+  min-width: 100%;
+  flex-grow: 100%;
+}
+aside article:first-of-type img {
+  margin-bottom: .8em;
+  display: block;
 }
 .step-indicator {
   max-width: 40em;
