@@ -27,7 +27,7 @@ html {
 body {
   width: 100%;
   min-height: 100%;
-  background: #fff;
+  background: #ecf0f1;
   color: #41484e;
   font-size: calc(.8em + .3vw);
   font-family: Punctuation, 'helvetica', sans-serif;
@@ -416,6 +416,9 @@ form a {
 .media-item {
   position: relative;
 }
+.media-item a {
+  text-decoration: none;
+}
 .media-item a:after {
   content: '';
   position: absolute;
@@ -468,8 +471,10 @@ form a {
 }
 article {
   padding: 2rem 1rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   max-width: 40em;
+  background: #fff;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 36rem ) {
   article img {
@@ -488,8 +493,10 @@ article footer {
 }
 section {
   padding: 2rem 1rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   max-width: 40em;
+  background: #fff;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
 .navigation {
   display: flex;
