@@ -1,31 +1,56 @@
 .rating {
-    max-width: 40em;
+	max-width: 40em;
 
-    border: none;
+	border: none;
 
-    display: flex;
-    flex-direction: row;
+	legend {
+		font-weight: @font-weight-bold;
+		font-size: @font-size-xxl;
+	}
 
-    legend {
-        font-weight: @font-weight-bold;
-        font-size: @font-size-xxl;
-    }
+	input {
+		// opacity: 0;
+		position: absolute;
+		clip: rect(0,0,0,0);
+		float: left;
+	}
 
-    .custom-radio {
-        @media @q-sm-min {
-            display: inline-block;
-            float: left;
-        }
-    }
+	label {
+		display: inline-block;
+		width: 25%;
+		float: left;
 
-    svg {
-        max-width: 1.325rem;
-        max-height: 1.325rem;
-        position: relative;
-        top: 2px;
-    }
+		cursor: pointer;
+		text-align: center;
+		font-size: @font-size-sm;
+	}
 
-    input {
-        display: inline-block;
-    }
+	svg {
+		margin: 0 auto;
+		display: block;
+		max-width: 3.5rem;
+		max-height: 3.5rem;
+
+		position: relative;
+		top: 2px;
+		opacity: .5;
+
+		transform: scale(.5);
+		transition: @transition-faster;
+	}
+
+	input:focus + label,
+	input:hover + label {
+		svg {
+			transform: scale(.75);
+		}
+	}
+
+	input:checked + label {
+		color: @color-primary;
+		svg {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
 }

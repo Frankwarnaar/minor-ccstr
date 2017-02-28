@@ -228,29 +228,6 @@ input[type='checkbox']:checked + label:before {
 input[type='checkbox']:focus + label:before {
   border-color: #60c5f8;
 }
-input[type='radio'] {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-input[type='radio'] + label:before {
-  content: '';
-  margin-right: .5rem;
-  width: 1.325rem;
-  height: 1.325rem;
-  display: inline-block;
-  position: relative;
-  top: 2px;
-  border: 2px solid #F7A100;
-  border-radius: 50%;
-  background: none;
-  transition: 0.1s ease-in-out;
-}
-input[type='radio']:checked + label:before {
-  background: #F7A100;
-}
-input[type='radio']:focus + label:before {
-  border-color: #60c5f8;
-}
 button {
   font-size: calc(calc(.8em + .3vw) * (1.12));
   padding: 0 .5rem;
@@ -527,27 +504,45 @@ aside article:first-of-type img {
 .rating {
   max-width: 40em;
   border: none;
-  display: flex;
-  flex-direction: row;
 }
 .rating legend {
   font-weight: 700;
   font-size: calc(calc(.8em + .3vw) * (1.12 * 1.12 * 1.12 * 1.12));
 }
-@media screen and (min-width: 36.01rem ) {
-  .rating .custom-radio {
-    display: inline-block;
-    float: left;
-  }
+.rating input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  float: left;
+}
+.rating label {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  font-size: calc(calc(.8em + .3vw) / (1.12));
 }
 .rating svg {
-  max-width: 1.325rem;
-  max-height: 1.325rem;
+  margin: 0 auto;
+  display: block;
+  max-width: 3.5rem;
+  max-height: 3.5rem;
   position: relative;
   top: 2px;
+  opacity: .5;
+  transform: scale(0.5);
+  transition: 0.2s ease-in-out;
 }
-.rating input {
-  display: inline-block;
+.rating input:focus + label svg,
+.rating input:hover + label svg {
+  transform: scale(0.75);
+}
+.rating input:checked + label {
+  color: #F7A100;
+}
+.rating input:checked + label svg {
+  transform: scale(1);
+  opacity: 1;
 }
 article {
   padding: 1rem;
