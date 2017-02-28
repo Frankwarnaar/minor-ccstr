@@ -2,10 +2,16 @@ a {
 	color: @color-primary;
 	transition: @transition-fastest;
 	cursor: pointer;
+	border: 2px solid transparent;
 
 	&:hover,
 	&:focus {
 		color: @color-primary-lighter;
+	}
+
+	&:focus {
+		outline: none;
+		border: 2px solid @color-primary;
 	}
 
 	h1,
