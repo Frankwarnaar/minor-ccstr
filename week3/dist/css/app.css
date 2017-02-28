@@ -517,6 +517,10 @@ aside article:first-of-type img {
   background: #F7A100;
   color: #fff;
 }
+.step-indicator li a:focus,
+.step-indicator li a:hover {
+  background: #ffb52b;
+}
 .step-indicator li:nth-of-type(-n+2) {
   padding: 0;
 }

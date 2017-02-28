@@ -16,7 +16,7 @@
 		width: 25%;
 		text-align: center;
 		background: @color-gray-clouds;
-		clip-path: polygon(0 0,90% 0, 100% 50%, 90% 100%, 0% 100%);
+		clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0% 100%);
 
 		a {
 			padding: .325rem 0;
@@ -26,6 +26,11 @@
 			height: 100%;
 			background: @color-primary;
 			color: @color-lightest;
+
+			&:focus,
+			&:hover {
+				background: @color-primary-lighter;
+			}
 		}
 	}
 
