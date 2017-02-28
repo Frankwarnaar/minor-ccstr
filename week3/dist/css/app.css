@@ -38,11 +38,27 @@ body {
 body > h1 {
   padding-left: 1rem;
 }
-main:target {
-  animation: flashBackgroundMain 0.7s ease-in-out forwards;
+body > footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
-:target {
-  animation: flashBackground 0.7s ease-in-out forwards;
+body > footer a {
+  padding: .5rem;
+  color: #fff;
+  background: #F7A100;
+  margin-right: 1rem;
+  float: right;
+  text-decoration: none;
+}
+body > footer a:hover,
+body > footer a:focus {
+  color: #fff;
+  background: #ffb52b;
+}
+main :target {
+  animation: flashBackground 1s ease-in-out forwards;
 }
 @keyframes flashBackground {
   0% {
@@ -56,20 +72,6 @@ main:target {
   }
   100% {
     background: #fff;
-  }
-}
-@keyframes flashBackgroundMain {
-  0% {
-    background: #daf2fd;
-  }
-  33% {
-    background: #ecf0f1;
-  }
-  67% {
-    background: #daf2fd;
-  }
-  100% {
-    background: #ecf0f1;
   }
 }
 body.hashChanged section:not(:target),
@@ -353,6 +355,18 @@ ol {
   max-width: 30rem;
   order: -1;
 }
+.chats a {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  background: #F7A100;
+  color: #fff;
+  float: right;
+  text-decoration: none;
+}
+.chats a:hover,
+.chats a:focus {
+  background: #ffb52b;
+}
 .chats li {
   display: flex;
   flex-direction: column;
@@ -397,6 +411,36 @@ ol {
 .chats form textarea {
   width: 100%;
   height: 2.5rem;
+}
+main + .chats {
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+@media screen and (min-width: 36.01rem ) {
+  main + .chats {
+    top: auto;
+    right: 1rem;
+    left: auto;
+  }
+}
+main + .chats:target {
+  display: block;
+}
+main + .chats:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  rght: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
 }
 [data-receiver="false"] {
   float: right;

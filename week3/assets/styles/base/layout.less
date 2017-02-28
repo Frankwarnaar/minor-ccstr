@@ -4,6 +4,8 @@
 	box-sizing: border-box;
 }
 
+@body-background: radial-gradient(lighten(@color-gray-clouds, 3%) 10%, transparent 0), radial-gradient(lighten(@color-gray-clouds, 3%) 10%, @color-gray-clouds 0);
+
 html {
 	width: 100%;
 	min-height: 100%;
@@ -14,7 +16,7 @@ body {
 	min-height: 100%;
 
 	background: @color-gray-clouds;
-	background: radial-gradient(lighten(@color-gray-clouds, 3%) 10%, transparent 0), radial-gradient(lighten(@color-gray-clouds, 3%) 10%, @color-gray-clouds 0);
+	background: @body-background;
 	background-size: 3rem 3rem;
 	background-position: 0 0, 1.5rem 1.5rem;
 	color: @color-gray-midnight;
@@ -28,12 +30,31 @@ body {
 	}
 }
 
-main:target {
-	animation: flashBackgroundMain @transition-slower forwards;
+body > footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+
+	a {
+		padding: .5rem;
+		color: @color-lightest;
+		background: @color-primary;
+		margin-right: 1rem;
+		float: right;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: @color-lightest;
+			background: @color-primary-lighter;
+		}
+	}
 }
 
-:target {
-	animation: flashBackground @transition-slower forwards;
+main :target {
+	animation: flashBackground @transition-slowest forwards;
 }
 
 @keyframes flashBackground {
@@ -51,24 +72,6 @@ main:target {
 
 	100% {
 		background: @color-lightest;
-	}
-}
-
-@keyframes flashBackgroundMain {
-	0% {
-		background: lighten(@color-highlight-info, 25%);
-	}
-
-	33% {
-		background: @color-gray-clouds;
-	}
-
-	67% {
-		background: lighten(@color-highlight-info, 25%);
-	}
-
-	100% {
-		background: @color-gray-clouds;
 	}
 }
 

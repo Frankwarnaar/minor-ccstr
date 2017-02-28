@@ -1,4 +1,19 @@
 .chats {
+	a {
+		padding: 0 1rem;
+		margin-bottom: 1rem;
+
+		background: @color-primary;
+		color: @color-lightest;
+		float: right;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			background: @color-primary-lighter;
+		}
+	}
+
 	li {
 		.flex;
 		.flex--column;
@@ -54,6 +69,42 @@
 			width: 100%;
 			height: @btn-height;
 		}
+	}
+}
+
+main + .chats {
+	margin-bottom: 0;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+
+	z-index: 2;
+
+	@media @q-sm-min {
+		top: auto;
+		right: 1rem;
+		left: auto;
+	}
+
+	&:target {
+		display: block;
+	}
+
+	&:after {
+		content: '';
+
+		position: absolute;
+		top: 0;
+		rght: 0;
+		bottom: 0;
+		left: 0;
+
+		z-index: 1;
+		background: rgba(0,0,0,.8);
 	}
 }
 

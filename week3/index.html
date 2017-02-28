@@ -99,90 +99,61 @@
 				</article>
 			</aside>
 		</div>
-
-		<section id="chat" class="chats">
-			<ol>
-				<li class="chat" data-receiver='false'>
-
-					<p class="chat__message">
-						Hey!
-					</p>
-
-					<footer>
-						<p class="chat__status">Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
-						<p class="chat__status" data-status="READ">Has been read</p>
-					</footer>
-
-				</li>
-				<li class="chat" data-receiver='true'>
-
-					<p class="chat__message">
-						Hey! Sorry I was busy
-					</p>
-
-					<footer>
-						<p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
-					</footer>
-
-				</li>
-				<li class="chat" data-receiver='false'>
-
-					<p class="chat__message">
-						I sent that 2 years ago
-					</p>
-
-					<footer>
-						<p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
-						<p data-status="DELIVERED">Has been delivered</p>
-					</footer>
-
-				</li>
-			</ol>
-
-			<form class="" action="/" method="post">
-
-				<label for="field-message">Message</label>
-				<textarea name="field-message" id="field-message"></textarea>
-
-				<button type="submit">Send</button>
-
-			</form>
-		</section>
-
-		<nav class="step-indicator">
-
-		    <h1>Finish your order</h1>
-
-		    <progress value="0.25" max="1">25%</progress>
-
-		    <ol>
-		        <li>
-		            <a href="/cart">Cart</a>
-		        </li>
-		        <li>
-		            <a href="#main-content" aria-label="Address, current step">Address</a>
-		        </li>
-		        <li>
-		            Payment
-		        </li>
-		        <li>
-		            Confirm
-		        </li>
-		    </ol>
-
-		</nav>
-
-		<section>
-			<h2>Loaders</h2>
-			<div class="loader"></div>
-			<div class="loader--secondary"></div>
-		</section>
-
-		<section>
-			<h2>Ampersands</h2>
-			<p>Text & text</p>
-		</section>
 	</main>
+
+	<section id="chat" class="chats">
+		<a href="#">X</a>
+		<ol>
+			<li class="chat" data-receiver='false'>
+
+				<p class="chat__message">
+					Hey!
+				</p>
+
+				<footer>
+					<p class="chat__status">Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+					<p class="chat__status" data-status="READ">Has been read</p>
+				</footer>
+
+			</li>
+			<li class="chat" data-receiver='true'>
+
+				<p class="chat__message">
+					Hey! Sorry I was busy
+				</p>
+
+				<footer>
+					<p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+				</footer>
+
+			</li>
+			<li class="chat" data-receiver='false'>
+
+				<p class="chat__message">
+					I sent that 2 years ago
+				</p>
+
+				<footer>
+					<p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+					<p data-status="DELIVERED">Has been delivered</p>
+				</footer>
+
+			</li>
+		</ol>
+
+		<form class="" action="/" method="post">
+
+			<label for="field-message">Message</label>
+			<textarea name="field-message" id="field-message"></textarea>
+
+			<button type="submit">Send</button>
+
+		</form>
+	</section>
+
+	<footer>
+		<a href="#chat">Chat met ons</a>
+	</footer
 	<script src="./dist/js/app.js" type="text/javascript"></script>
 </body>
 
