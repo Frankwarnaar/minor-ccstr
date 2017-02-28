@@ -8,6 +8,11 @@
     border-radius: 50%;
 }
 
+.loader--secondary {
+	&:extend(.loader);
+	animation: rotateScale @transition-slowest infinite;
+}
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -15,5 +20,19 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(.5);
+    }
+
+    50% {
+	        transform: rotate(360deg) scale(1);
+    }
+
+	100% {
+        transform: rotate(720deg) scale(.5);
     }
 }

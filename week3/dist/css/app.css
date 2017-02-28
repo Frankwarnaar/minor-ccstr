@@ -284,7 +284,7 @@ progress {
   /* default: inline-block */
   width: 100%;
   margin: 2em auto;
-  border: 2px solid #333;
+  border: 1px solid #333;
   background: #fff;
   color: #F7A100;
   border-radius: 0;
@@ -296,7 +296,8 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background: #F7A100;
 }
-.loader {
+.loader,
+.loader--secondary {
   width: 3rem;
   height: 3rem;
   border: 0.325rem solid #ecf0f1;
@@ -304,12 +305,26 @@ progress::-webkit-progress-value {
   animation: rotate 1s ease-in-out infinite;
   border-radius: 50%;
 }
+.loader--secondary {
+  animation: rotateScale 1s ease-in-out infinite;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes rotateScale {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+  50% {
+    transform: rotate(360deg) scale(1);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.5);
   }
 }
 ol {
