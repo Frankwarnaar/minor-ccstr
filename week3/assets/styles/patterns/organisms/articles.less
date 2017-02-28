@@ -10,17 +10,15 @@ article {
 		display: block;
 		margin: 0 auto;
 		width: min-content;
-		max-width: 38em;
 
 		img {
 			margin: 0 auto;
-			max-width: inherit;
+			max-width: ~"calc(100vw - 2em)";
 			max-height: calc(100vh - 32em);
-		}
 
-		figcaption {
-			// max-width: 40em;
-			// max-height: calc(100vh - 5rem);
+			@media @q-sm-min {
+				max-width: 38em;
+			}
 		}
 	}
 
@@ -35,8 +33,4 @@ article {
 		padding-right: 0;
 		box-shadow: none;
 	}
-}
-
-.picture-with-subtitle {
-	width: max-content;
 }

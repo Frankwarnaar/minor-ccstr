@@ -8,6 +8,26 @@
 	}
 }
 
+.flex--lg-up {
+	@media @q-lg-min {
+		display: flex;
+		justify-content: space-around;
+
+		> *:first-child {
+			margin-left: 1rem;
+		}
+
+		> *:last-child {
+			margin-right: 1rem;
+		}
+
+		> * {
+			margin-left: .5rem;
+			margin-right: .5rem;
+		}
+	}
+}
+
 .flex-row {
     @media @q-md-min {
         display: flex;
