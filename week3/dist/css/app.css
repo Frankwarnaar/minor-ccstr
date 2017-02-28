@@ -287,7 +287,7 @@ progress {
   /* default: inline-block */
   width: 100%;
   margin: 2em auto;
-  border: 1px solid #333;
+  border: 1px solid #ecf0f1;
   background: #fff;
   color: #F7A100;
   border-radius: 0;
@@ -487,7 +487,7 @@ aside article:first-of-type img {
 }
 .step-indicator {
   padding: 1rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   max-width: 40em;
   background: #fff;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
@@ -520,6 +520,7 @@ aside article:first-of-type img {
   padding: 0;
 }
 .rating {
+  margin-top: -1rem;
   max-width: 40em;
   border: none;
 }
@@ -589,6 +590,11 @@ article footer {
   padding-top: .325rem;
   margin-top: .325rem;
   border-top: 1px solid #F7A100;
+}
+article .rating {
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none;
 }
 .picture-with-subtitle {
   width: max-content;
