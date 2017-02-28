@@ -153,8 +153,8 @@
 		}
 
 		&:hover ul,
-		&:has(a:focus),
-		&.child-focus,
+		// &:has(a:focus),
+		a.active + ul,
 		a:focus + ul {
 			@media @q-md-min {
 				display: block;

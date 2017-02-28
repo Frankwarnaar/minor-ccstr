@@ -735,8 +735,7 @@ section {
 }
 @media screen and (min-width: 48.01rem ) {
   .navigation:first-of-type > ul > li:nth-child(2):hover ul,
-  .navigation:first-of-type > ul > li:nth-child(2):has(a:focus),
-  .navigation:first-of-type > ul > li:nth-child(2).child-focus,
+  .navigation:first-of-type > ul > li:nth-child(2) a.active + ul,
   .navigation:first-of-type > ul > li:nth-child(2) a:focus + ul {
     display: block;
   }

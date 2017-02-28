@@ -1,11 +1,24 @@
 /*jshint esversion: 6 */
-(function() {
-    // 'use strict';
-    // window.addEventListener('hashchange', () => {
-    //     const body = document.querySelector('body');
-    //     body.classList.remove('hashChanged');
-    //     setTimeout(() => {
-    //         body.classList.add('hashChanged');
-    //     }, 1);
-    // });
-}());
+(() => {
+	'use strict';
+
+	window.addEventListener('hashchange', () => {
+		const body = document.querySelector('body');
+		body.classList.remove('hashChanged');
+		setTimeout(() => {
+			body.classList.add('hashChanged');
+		}, 1);
+	});
+
+	const $link = document.querySelector('[href="/products"]');
+	const $children = document.querySelectorAll('[href="/products"]+ ul li');
+
+	$link.addEventListener('focusin', () => {
+		$link.classList.add('active');
+	});
+
+	$children[$children.length - 1].addEventListener('focusout', () => {
+		$link.classList.remove('active');
+	});
+
+})();
