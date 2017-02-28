@@ -781,7 +781,7 @@ section {
 }
 @media screen and (min-width: 48.01rem ) {
   .navigation:first-of-type > ul > li:nth-child(2) ul a {
-    line-height: 2rem;
+    line-height: 2.2rem;
   }
 }
 @media screen and (min-width: 48.01rem ) {
