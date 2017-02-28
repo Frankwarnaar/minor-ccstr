@@ -14,6 +14,9 @@ body {
 	min-height: 100%;
 
 	background: @color-gray-clouds;
+	background: radial-gradient(lighten(@color-gray-clouds, 3%) 10%, transparent 0), radial-gradient(lighten(@color-gray-clouds, 3%) 10%, @color-gray-clouds 0);
+	background-size: 3rem 3rem;
+	background-position: 0 0, 1.5rem 1.5rem;
 	color: @color-gray-midnight;
 
 	font-size: @font-size-base;

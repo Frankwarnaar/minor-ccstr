@@ -28,6 +28,9 @@ body {
   width: 100%;
   min-height: 100%;
   background: #ecf0f1;
+  background: radial-gradient(#f5f7f7 10%, transparent 0), radial-gradient(#f5f7f7 10%, #ecf0f1 0);
+  background-size: 3rem 3rem;
+  background-position: 0 0, 1.5rem 1.5rem;
   color: #41484e;
   font-size: calc(.8em + .3vw);
   font-family: 'Ampersand', 'helvetica', sans-serif;
