@@ -19,6 +19,7 @@ aside {
 		box-shadow: none;
 		border: 1px solid @color-gray-clouds;
 		box-shadow: none;
+		transition: @transition-fastest;
 
 		display: flex;
 		flex-direction: column;
@@ -55,6 +56,10 @@ aside {
 
 		p {
 			display: none;
+		}
+
+		&:hover {
+			background: @color-gray-clouds;
 		}
 	}
 

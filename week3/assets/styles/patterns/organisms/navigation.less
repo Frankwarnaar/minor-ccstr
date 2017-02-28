@@ -152,14 +152,12 @@
 			}
 		}
 
-		&:hover {
-			ul {
-				@media @q-md-min {
-					display: block;
-				}
+		&:hover ul,
+		a:focus + ul {
+			@media @q-md-min {
+				display: block;
 			}
 		}
-
 	}
 
 	@media @q-md-min {

@@ -6,13 +6,21 @@ article {
 	background: @color-lightest;
 	box-shadow: 0 0 1rem 0 rgba(0,0,0,.2);
 
-	img {
-		@media @q-xs-max {
-			width: 100%;
+	figure {
+		display: block;
+		margin: 0 auto;
+		width: min-content;
+		max-width: 38em;
+
+		img {
+			margin: 0 auto;
+			max-width: inherit;
+			max-height: calc(100vh - 32em);
 		}
 
-		@media @q-md-min {
-			margin-right: 1rem;
+		figcaption {
+			// max-width: 40em;
+			// max-height: calc(100vh - 5rem);
 		}
 	}
 
@@ -21,4 +29,8 @@ article {
 		margin-top: .325rem;
 		border-top: 1px solid @color-primary;
 	}
+}
+
+.picture-with-subtitle {
+	width: max-content;
 }

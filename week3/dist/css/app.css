@@ -35,6 +35,9 @@ body {
 body > h1 {
   padding-left: 1rem;
 }
+main:target {
+  animation: flashBackgroundMain 0.7s ease-in-out forwards;
+}
 :target {
   animation: flashBackground 0.7s ease-in-out forwards;
 }
@@ -50,6 +53,20 @@ body > h1 {
   }
   100% {
     background: #fff;
+  }
+}
+@keyframes flashBackgroundMain {
+  0% {
+    background: #daf2fd;
+  }
+  33% {
+    background: #ecf0f1;
+  }
+  67% {
+    background: #daf2fd;
+  }
+  100% {
+    background: #ecf0f1;
   }
 }
 body.hashChanged section:not(:target),
@@ -412,6 +429,7 @@ aside article {
   position: relative;
   border: 1px solid #ecf0f1;
   box-shadow: none;
+  transition: 0.1s ease-in-out;
   display: flex;
   flex-direction: column;
 }
@@ -442,6 +460,9 @@ aside article:not(:first-of-type) h1 {
 }
 aside article p {
   display: none;
+}
+aside article:hover {
+  background: #ecf0f1;
 }
 aside article:first-of-type p {
   display: block;
@@ -497,20 +518,24 @@ article {
   background: #fff;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 36rem ) {
-  article img {
-    width: 100%;
-  }
+article figure {
+  display: block;
+  margin: 0 auto;
+  width: min-content;
+  max-width: 38em;
 }
-@media screen and (min-width: 48.01rem ) {
-  article img {
-    margin-right: 1rem;
-  }
+article figure img {
+  margin: 0 auto;
+  max-width: inherit;
+  max-height: calc(68vh);
 }
 article footer {
   padding-top: .325rem;
   margin-top: .325rem;
   border-top: 1px solid #F7A100;
+}
+.picture-with-subtitle {
+  width: max-content;
 }
 section {
   padding: 1rem;
@@ -656,7 +681,8 @@ section {
   }
 }
 @media screen and (min-width: 48.01rem ) {
-  .navigation:first-of-type > ul > li:nth-child(2):hover ul {
+  .navigation:first-of-type > ul > li:nth-child(2):hover ul,
+  .navigation:first-of-type > ul > li:nth-child(2) a:focus + ul {
     display: block;
   }
 }

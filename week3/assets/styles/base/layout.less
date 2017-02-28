@@ -25,6 +25,9 @@ body {
 	}
 }
 
+main:target {
+	animation: flashBackgroundMain @transition-slower forwards;
+}
 
 :target {
 	animation: flashBackground @transition-slower forwards;
@@ -45,6 +48,24 @@ body {
 
 	100% {
 		background: @color-lightest;
+	}
+}
+
+@keyframes flashBackgroundMain {
+	0% {
+		background: lighten(@color-highlight-info, 25%);
+	}
+
+	33% {
+		background: @color-gray-clouds;
+	}
+
+	67% {
+		background: lighten(@color-highlight-info, 25%);
+	}
+
+	100% {
+		background: @color-gray-clouds;
 	}
 }
 
