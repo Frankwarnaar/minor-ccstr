@@ -72,6 +72,10 @@
 	}
 }
 
+[data-receiver="false"] {
+	float: right;
+}
+
 main + .chats {
 	margin-bottom: 0;
 
@@ -93,22 +97,4 @@ main + .chats {
 	&:target {
 		display: block;
 	}
-
-	&:after {
-		content: '';
-
-		position: absolute;
-		top: 0;
-		rght: 0;
-		bottom: 0;
-		left: 0;
-
-		z-index: 1;
-		background: rgba(0,0,0,.8);
-	}
 }
-
-[data-receiver="false"] {
-	float: right;
-}
-
