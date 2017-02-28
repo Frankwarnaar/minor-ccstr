@@ -518,6 +518,7 @@ aside article:first-of-type img {
   display: inline-block;
   width: 25%;
   float: left;
+  border: 2px solid transparent;
   cursor: pointer;
   text-align: center;
   font-size: calc(calc(.8em + .3vw) / (1.12));
@@ -536,6 +537,10 @@ aside article:first-of-type img {
 .rating input:focus + label svg,
 .rating input:hover + label svg {
   transform: scale(0.75);
+}
+.rating input:focus + label {
+  border: 2px solid #F7A100;
+  outline: none;
 }
 .rating input:checked + label {
   color: #F7A100;
