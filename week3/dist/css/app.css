@@ -384,7 +384,7 @@ form a {
 fieldset {
   padding: 1rem;
   padding-top: 2.825rem;
-  margin: 1rem auto;
+  margin: 0 auto 1rem;
   background: #fff;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 }
@@ -468,7 +468,7 @@ aside article:first-of-type img {
   display: block;
 }
 .step-indicator {
-  padding: 2rem 1rem;
+  padding: 1rem;
   margin: 0 auto;
   max-width: 40em;
   background: #fff;
