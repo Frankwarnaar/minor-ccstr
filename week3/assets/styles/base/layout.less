@@ -76,9 +76,11 @@ main :target {
 }
 
 body.hashChanged {
-	section:not(:target),
-	article:not(:target) {
-		animation: deemphasize @transition-slower forwards;
+	main {
+		section:not(:target),
+		article:not(:target) {
+			animation: deemphasize @transition-slower forwards;
+		}
 	}
 }
 

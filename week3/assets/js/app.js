@@ -4,10 +4,14 @@
 
 	window.addEventListener('hashchange', () => {
 		const body = document.querySelector('body');
-		body.classList.remove('hashChanged');
-		setTimeout(() => {
-			body.classList.add('hashChanged');
-		}, 1);
+		const hash = window.location.hash;
+		console.log(hash);
+		if (hash !== '' && hash !== '#chat') {
+			body.classList.remove('hashChanged');
+			setTimeout(() => {
+				body.classList.add('hashChanged');
+			}, 1);
+		}
 	});
 
 	const $link = document.querySelector('[href="/products"]');

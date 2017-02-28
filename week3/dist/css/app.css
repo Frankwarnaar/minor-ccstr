@@ -74,8 +74,8 @@ main :target {
     background: #fff;
   }
 }
-body.hashChanged section:not(:target),
-body.hashChanged article:not(:target) {
+body.hashChanged main section:not(:target),
+body.hashChanged main article:not(:target) {
   animation: deemphasize 0.7s ease-in-out forwards;
 }
 @keyframes deemphasize {
