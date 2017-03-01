@@ -675,9 +675,23 @@ article .rating {
 section {
   padding: 1rem;
   margin: 0 auto 1rem;
+  position: relative;
   max-width: 40em;
-  background: #fff;
+  clip-path: polygon(-1rem -1rem, calc(100% - 3rem) -1rem, calc(100% + 1rem) 3rem, calc(100% + 1rem) calc(100% + 1rem), -1.5rem calc(100% + 1rem));
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+section:after {
+  content: '';
+  background: #fff;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to left bottom, transparent 50%, rgba(200, 200, 200, 0.8) 0) no-repeat 100% 0 / 2em 2em, linear-gradient(-135deg, transparent 1.5rem, #fff 0);
+  z-index: -1;
 }
 .navigation {
   display: flex;
