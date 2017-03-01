@@ -7,11 +7,16 @@ progress {
 	color: @color-primary;
 	border-radius: 0;
 	box-shadow: none;
-}
 
-progress::-webkit-progress-bar {
-    background: transparent;
-}
-progress::-webkit-progress-value {
-  background: @color-primary;
+	&::-webkit-progress-bar {
+		background: @color-lightest;
+	}
+
+	&::-moz-progress-bar {
+		background: @color-primary;
+	}
+
+	&::-webkit-progress-value {
+		background: @color-primary;
+	}
 }

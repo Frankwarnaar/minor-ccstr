@@ -19,10 +19,15 @@ aside {
 		box-shadow: none;
 		border: 1px solid @color-gray-clouds;
 		box-shadow: none;
+		clip-path: none;
 		transition: @transition-fastest;
 
 		display: flex;
 		flex-direction: column;
+
+		&:after {
+			content: none;
+		}
 
 		a {
 			text-decoration: none;
