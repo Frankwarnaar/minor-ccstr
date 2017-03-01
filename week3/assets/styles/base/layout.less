@@ -1,9 +1,3 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
 @body-background: radial-gradient(lighten(@color-gray-clouds, 3%) 10%, transparent 0), radial-gradient(lighten(@color-gray-clouds, 3%) 10%, @color-gray-clouds 0);
 
 html {
@@ -12,6 +6,7 @@ html {
 }
 
 body {
+	margin: 0;
 	width: 100%;
 	min-height: 100%;
 
@@ -61,18 +56,34 @@ main :target {
 @keyframes flashBackground {
 	0% {
 		background: lighten(@color-highlight-info, 25%);
+
+		&:after {
+			background: lighten(@color-highlight-info, 25%);
+		}
 	}
 
 	33% {
 		background: @color-lightest;
+
+		&:after {
+			background: @color-lightest;
+		}
 	}
 
 	67% {
 		background: lighten(@color-highlight-info, 25%);
+
+		&:after {
+			background: lighten(@color-highlight-info, 25%);
+		}
 	}
 
 	100% {
 		background: @color-lightest;
+
+		&:after {
+			background: @color-lightest;
+		}
 	}
 }
 

@@ -1,4 +1,11 @@
 .chats {
+	background: @color-lightest;
+	clip-path: none;
+
+	&:after {
+		content: none;
+	}
+
 	a {
 		padding: 0 1rem;
 		margin-bottom: 1rem;
@@ -14,14 +21,22 @@
 		}
 	}
 
+	ul {
+		margin: 0;
+	}
+
 	li {
 		.flex;
 		.flex--column;
 		width: 90%;
 		padding: .5rem;
-		margin: 1rem 0;
+		margin-bottom: 1rem;
 
 		background: @color-gray-clouds;
+
+		p {
+			margin: 0;
+		}
 
 		> p {
 			padding-top: .325rem;
