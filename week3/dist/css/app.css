@@ -243,7 +243,7 @@ input[type='checkbox']:checked:after {
   background: #F7A100;
 }
 input[type='checkbox']:focus:after {
-  border-color: #60c5f8;
+  border-color: #333;
 }
 input[type='checkbox'] + label:before {
   content: '';
@@ -261,7 +261,7 @@ input[type='checkbox']:checked + label:before {
   background: #F7A100;
 }
 input[type='checkbox']:focus + label:before {
-  border-color: #60c5f8;
+  border-color: #333;
 }
 button {
   font-size: calc(calc(.8em + .3vw) * (1.12));
