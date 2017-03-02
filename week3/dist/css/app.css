@@ -54,6 +54,11 @@ body > footer a:focus {
   color: #fff;
   background: #ffb52b;
 }
+body > footer a:focus {
+  border-color: #ecf0f1;
+  background: #ecf0f1;
+  color: #F7A100;
+}
 main :target {
   animation: flashBackground 1s ease-in-out forwards;
 }
@@ -263,7 +268,7 @@ button {
   padding: 0 .5rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  border: none;
+  border: 2px solid transparent;
   background: #F7A100;
   font-weight: 400;
   color: #fff;
@@ -272,6 +277,10 @@ button {
 }
 button:hover {
   background: #ffb52b;
+}
+button:focus {
+  border: 2px solid #333;
+  outline: none;
 }
 img {
   max-width: 100%;
@@ -592,10 +601,16 @@ aside article:first-of-type img {
   height: 100%;
   background: #F7A100;
   color: #fff;
+  box-sizing: content-box;
 }
 .step-indicator li a:focus,
 .step-indicator li a:hover {
   background: #ffb52b;
+}
+.step-indicator li a:focus {
+  background: #ecf0f1;
+  color: #F7A100;
+  border-color: #ecf0f1;
 }
 .step-indicator li:nth-of-type(-n+2) {
   padding: 0;
@@ -769,6 +784,7 @@ section:after {
   text-decoration: none;
   font-weight: 400;
   line-height: 2rem;
+  border: 2px solid transparent;
   padding: .5rem;
 }
 .navigation a:hover {
@@ -777,7 +793,7 @@ section:after {
 .navigation a:focus {
   color: #ecf0f1;
   outline: none;
-  border-bottom: 1px solid #ecf0f1;
+  border: 2px solid #ecf0f1;
 }
 @media screen and (min-width: 48.01rem ) {
   .navigation a {
@@ -835,19 +851,12 @@ section:after {
 .navigation:first-of-type > ul > li:nth-child(2) ul li {
   width: 100%;
 }
-@media screen and (min-width: 48.01rem ) {
-  .navigation:first-of-type > ul > li:nth-child(2) ul li {
-    width: auto;
-  }
-}
 .navigation:first-of-type > ul > li:nth-child(2) ul a {
+  display: block;
+  width: 100%;
   line-height: 1.5rem;
   font-size: calc(calc(.8em + .3vw) / (1.12));
-}
-@media screen and (min-width: 48.01rem ) {
-  .navigation:first-of-type > ul > li:nth-child(2) ul a {
-    line-height: 2.2rem;
-  }
+  box-sizing: border-box;
 }
 @media screen and (min-width: 48.01rem ) {
   .navigation:first-of-type > ul > li:nth-child(2) ul {
